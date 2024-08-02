@@ -1,0 +1,27 @@
+/* src/components/Reservation.css */
+.reservation-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .form-col {
+    background-color: #f8f9fa; /* Light background for the form */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .other-half {
+    background-color: #343a40; /* Dark background for the other half */
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .other-content {
+    text-align: center;
+  }
+  
