@@ -10,8 +10,8 @@ const Hero = () => {
       <Container className="hero-content">
         <Row className="justify-content-center text-center">
           <Col md={8}>
-            <h1>Welcome to Slate Kitchen & Bar</h1>
-            <p>Experience culinary excellence in the heart of Nairobi</p>
+            <h1>Experience culinary excellence in the heart of Nairobi</h1>
+            <p>At Alcove, our culinary artisans embark on a journey, weaving a tapestry of exquisite tastes inspired by the world’s diverse cuisines. Each dish is a masterpiece, a brushstroke on the canvas of indulgence. Immerse yourself in a symphony of flavors that reflects our passion for culinary excellence.</p>
             <div className="hero-links">
               <a href="#reservation" className="hero-link">Reserve a Table</a>
               <span className="divider">|</span>
