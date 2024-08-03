@@ -1,0 +1,53 @@
+/* src/components/AboutUs/AboutUs.css */
+.about-wrapper {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-head {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .about-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .about-quote {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-author {
+    font-weight: bold;
+  }
+  
+  .about-buttons {
+    margin-top: 1rem;
+  }
+  
+  .about-prevButton,
+  .about-nextButton {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .about-prevButton:hover,
+  .about-nextButton:hover {
+    background-color: #495057;
+  }
+  
