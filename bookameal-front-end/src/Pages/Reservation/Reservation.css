@@ -2,26 +2,70 @@
 .reservation-container {
     display: flex;
     height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .form-col, .other-half {
+    flex: 1; /* Ensure both columns are of equal width */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 2rem;
   }
   
   .form-col {
     background-color: #f8f9fa; /* Light background for the form */
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border-right: 1px solid #dee2e6; /* Light border to separate columns */
   }
   
   .other-half {
     background-color: #343a40; /* Dark background for the other half */
     color: white;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   
-  .other-content {
-    text-align: center;
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #343a40; /* Dark color for the heading */
+  }
+  
+  .form-control {
+    border-radius: 0.25rem; /* Rounded corners for inputs */
+    border: 1px solid #ced4da; /* Light border for inputs */
+    padding: 0.75rem 1.25rem; /* Padding for inputs */
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff; /* Highlight border color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Subtle shadow on focus */
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem; /* Space between form groups */
+  }
+  
+  .form-label {
+    font-weight: 500; /* Medium weight for labels */
+    margin-bottom: 0.5rem; /* Space between label and input */
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem; /* Padding for buttons */
+    border-radius: 0.25rem; /* Rounded corners for buttons */
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
+  button[type="submit"]:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* Shadow on focus */
   }
   
