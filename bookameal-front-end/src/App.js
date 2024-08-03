@@ -6,6 +6,7 @@ import Navigationbar from './components/Navbar/Navbar';
 import Hero from './Pages/LandingPage/Hero/Hero';
 import Chef from './Pages/LandingPage/Chef/Chef';
 import Reservation from './Pages/Reservation/Reservation';
+import AboutUs from './Pages/About/About';
 import './App.css';
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
           <Chef />
         </>
       } />
+      <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
       <Route path="/reservation" element={<Reservation />} /> {/* Reservation page route */}
     </Routes>
   </Router>

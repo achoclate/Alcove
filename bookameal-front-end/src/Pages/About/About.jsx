@@ -1,38 +1,34 @@
-// src/components/AboutUs/AboutUs.js
-import React from "react";
-import quotes from "../../utils/quotes.json";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "./AboutUs.css";
+// src/components/AboutUs/AboutUs.jsx
+import React from 'react';
+import data from '../../utils/about.json';
+import { Swiper, SwiperSlide, useSwiper} from 'swiper/react';
 import { sliderSettings } from "../../utils/common";
+import 'swiper/css';
+import './About.css';
 
 const AboutUs = () => {
   return (
-    <div id="about-us" className="about-wrapper">
+    <div id="about" className="about-wrapper">
       <div className="paddings innerWidth about-container">
         <div className="flexColStart about-head">
-          <span className="orangeText">Our Beliefs</span>
-          <span className="primaryText">Inspiring Quotes</span>
+          <span className="orangeText">What Our Guests Say</span>
+          <span className="primaryText">Testimonials</span>
         </div>
         <Swiper {...sliderSettings}>
-          <SlideNextButton />
-          {/* slider */}
-          {quotes.map((quote, i) => (
+          {data.map((quote, i) => (
             <SwiperSlide key={i}>
               <div className="flexColStart about-card">
-                <p className="secondaryText about-quote">"{quote.quote}"</p>
-                <span className="primaryText about-author">- {quote.author}</span>
+                <p className="about-quote">"{quote.quote}"</p>
+                <p className="about-author">- {quote.author}</p>
               </div>
             </SwiperSlide>
           ))}
+          <SlideNextButton />
         </Swiper>
       </div>
     </div>
   );
 };
-
-export default AboutUs;
 
 const SlideNextButton = () => {
   const swiper = useSwiper();
@@ -47,3 +43,5 @@ const SlideNextButton = () => {
     </div>
   );
 };
+
+export default AboutUs;
