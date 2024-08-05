@@ -1,13 +1,14 @@
 import React from 'react';
 
 import SubHeading from '../../../components/SubHeading/SubHeading';
-import images from '../../../constants/images';
+import chefImage from '/home/achoclate/BookaMeal/bookameal-front-end/src/assets/chef.jpeg'
+
 import './Chef.css';
 
 const Chef = () => (
   <div className="app__bg app__wrapper section__padding">
     <div className="app__wrapper_img app__wrapper_img-reverse">
-      <img src={images.chef} alt="chef_image" />
+      <img src={chefImage} alt="chef_image" />
     </div>
     <div className="app__wrapper_info">
       <SubHeading title="Chef's word" />
