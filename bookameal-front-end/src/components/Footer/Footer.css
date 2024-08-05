@@ -1,4 +1,3 @@
-/* Footer.css */
 .footer {
     width: 100%;
     position: relative;
@@ -6,9 +5,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   background-color: black !important;
+    background-color: black !important;
     color: white; /* Ensure text is white for visibility */
-    padding: 2rem 0;
+    padding: 1rem 0; /* Reduced padding */
 }
 
 .footer-links {
@@ -16,31 +15,31 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 5rem;
-    padding: 0 2rem;
+    margin-top: 3rem; /* Reduced margin-top */
+    padding: 0 1rem; /* Reduced padding */
 }
 
 .footer-contact,
 .footer-logo,
 .footer-work {
     flex: 1;
-    margin: 1rem;
+    margin: 0.5rem; /* Reduced margin */
     text-align: center;
 }
 
 .footer-logo img {
-    width: 210px;
-    margin-bottom: 0.75rem;
+    width: 150px; /* Reduced logo width */
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer-icons {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem; /* Reduced margin-top */
 }
 
 .footer-icons svg {
     color: var(--color-white);
-    margin: 0.5rem;
-    font-size: 24px;
+    margin: 0.25rem; /* Reduced margin */
+    font-size: 20px; /* Reduced font size */
     cursor: pointer;
 }
 
@@ -54,27 +53,27 @@
     font-weight: 400;
     letter-spacing: 0.04em;
     text-transform: capitalize;
-    font-size: 32px;
-    line-height: 41.6px;
-    margin-bottom: 1rem;
+    font-size: 24px; /* Reduced font size */
+    line-height: 32px; /* Adjusted line-height */
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer p {
     font-family: var(--font-base);
     color: var(--color-white);
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 1rem;
+    font-size: 14px; /* Reduced font size */
+    line-height: 20px; /* Adjusted line-height */
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer-copyright {
-    margin-top: 3rem;
+    margin-top: 1.5rem; /* Reduced margin-top */
 }
 
 @media screen and (min-width: 2000px) {
     .footer h1 {
-        font-size: 51px;
-        line-height: 61.6px;
+        font-size: 30px; /* Adjusted for larger screens */
+        line-height: 38px;
     }
 }
 
@@ -88,19 +87,19 @@
     .footer-contact,
     .footer-logo,
     .footer-work {
-        margin: 2rem 0;
+        margin: 1rem 0; /* Adjusted margin */
         width: 100%;
     }
 }
 
 @media screen and (max-width: 650px) {
     .footer {
-        padding: 0 0 2rem 0;
+        padding: 0 0 1rem 0; /* Adjusted padding */
     }
 }
 
 @media screen and (max-width: 350px) {
     .footer-logo img {
-        width: 80%;
+        width: 70%; /* Reduced logo width */
     }
 }

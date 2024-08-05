@@ -1,4 +1,3 @@
-// src/components/Reservation.js
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './Reservation.css'; // Custom CSS file for additional styling
@@ -8,7 +7,7 @@ const Reservation = () => {
     <div className="reservation-container">
       <div className="form-col">
         <Form>
-        <h2 style={{ color: 'black' }}>Make a Reservation</h2>
+          <h2 style={{ color: 'black' }}>Make a Reservation</h2>
 
           <Form.Group controlId="formName">
             <Form.Label>Name</Form.Label>
