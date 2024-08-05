@@ -2,7 +2,7 @@
 .reservation-container {
     display: flex;
     height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
+    margin: 60px; /* Remove default margin */
     padding: 0; /* Remove default padding */
   }
   
@@ -20,14 +20,14 @@
   }
   
   .other-half {
-    background-color: #343a40; /* Dark background for the other half */
+    background-color:black; /* Dark background for the other half */
     color: white;
   }
   
   h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
-    color: #343a40; /* Dark color for the heading */
+    color: white; /* Dark color for the heading */
   }
   
   .form-control {
@@ -53,19 +53,20 @@
   button {
     padding: 0.75rem 1.5rem; /* Padding for buttons */
     border-radius: 0.25rem; /* Rounded corners for buttons */
+    margin: 6px;
   }
   
   button[type="submit"] {
-    background-color: #007bff; /* Primary button color */
+    background-color: red; /* Primary button color */
     color: white;
     border: none;
   }
   
   button[type="submit"]:hover {
-    background-color: #0056b3; /* Darker color on hover */
+    background-color: #b30003; /* Darker color on hover */
   }
   
   button[type="submit"]:focus {
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* Shadow on focus */
+    box-shadow: 0 0 0 0.2rem rgba(255, 38, 38, 0.5); /* Shadow on focus */
   }
   

@@ -8,7 +8,8 @@ const Reservation = () => {
     <div className="reservation-container">
       <div className="form-col">
         <Form>
-          <h2>Make a Reservation</h2>
+        <h2 style={{ color: 'black' }}>Make a Reservation</h2>
+
           <Form.Group controlId="formName">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" placeholder="Enter your name" required />

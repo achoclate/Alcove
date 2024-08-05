@@ -8,6 +8,7 @@ import Chef from './Pages/LandingPage/Chef/Chef';
 import Reservation from './Pages/Reservation/Reservation';
 import AboutUs from './Pages/About/About';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 const App = () => (
   <Router>
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
       <Route path="/reservation" element={<Reservation />} /> {/* Reservation page route */}
     </Routes>
+    <Footer/>
   </Router>
 );
 
