@@ -1,89 +1,84 @@
-/* src/components/AboutUs/AboutUs.css */
-.about-wrapper {
-    background-color: #f9f9f9;
-    padding: 2rem 0;
+.about-container {
+  position: relative;
+  padding: 2rem 0;
+  background-color: #000; /* Background color if needed */
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.about-overlay img {
+  width: 100%; /* Adjust width and height as needed */
+  height: auto;
+  z-index: 0;
+}
+
+.about-content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+
+.about-content_about,
+.about-content_history,
+.about-content_knife {
+  flex: 1;
+  margin: 1rem;
+  text-align: center;
+}
+
+.about-content_knife {
+  margin: 2rem;
+}
+
+.about-content_knife img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  height: auto;
+}
+
+.heading {
+  font-family: 'Cormorant', serif; /* Replace with actual font-family */
+  color: #fff; /* White color */
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  color: #fff; /* White color */
+  margin: 2rem 0;
+}
+
+.button {
+  background-color: #333; /* Replace with actual button color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555; /* Button hover color */
+}
+
+@media screen and (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
   }
-  
-  .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    gap: 2rem;
+
+  .about-content_knife {
+    margin: 2rem 0;
   }
-  
-  .about-head {
-    margin-bottom: 2rem;
-    text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .about-overlay img {
+    width: 80%;
+    height: auto;
   }
-  
-  .about-card {
-    gap: 0.6rem;
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: max-content;
-    margin: auto;
-    transition: all 300ms ease-in;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .about-quote {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-author {
-    font-weight: bold;
-  }
-  
-  .about-card:hover {
-    scale: 1.025;
-    cursor: pointer;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(136, 160, 255, 0.46) 217.91%
-    );
-    box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
-  }
-  
-  .swiper-horizontal {
-    overflow: visible;
-  }
-  
-  .about-buttons {
-    position: absolute;
-    gap: 1rem;
-    top: -4rem;
-    right: 0;
-  }
-  
-  .about-buttons button {
-    font-size: 1.2rem;
-    padding: 0.2rem 0.8rem;
-    color: #071739;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    cursor: pointer;
-  }
-  
-  .about-prevButton {
-    background-color: #eeeeff;
-  }
-  
-  .about-nextButton {
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
-  }
-  
-  @media (max-width: 640px) {
-    .about-head {
-      align-items: center;
-    }
-    .about-buttons {
-      position: initial;
-    }
-  }
-  
+}
