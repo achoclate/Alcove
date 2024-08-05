@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaRegUserCircle } from 'react-icons/fa';
 import './Navbar.css'; // Import the CSS file
 
 const Navigationbar = () => {
@@ -21,6 +22,9 @@ const Navigationbar = () => {
               <NavDropdown.Item as={Link} to="#brand3">Steak & Smokehouse</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <div className="navbar-user-icon">
+            <FaRegUserCircle size="1.5em" />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

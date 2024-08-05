@@ -49,3 +49,11 @@
     background-color: #495057; /* Slightly lighter background on hover */
     color: #adb5bd; /* Light color for text on hover */
 }
+
+/* Style for the user icon */
+.navbar-user-icon {
+    margin-left: auto; /* Push the icon to the right */
+    display: flex;
+    align-items: center;
+    color: white; /* White color for the icon */
+}
