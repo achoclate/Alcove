@@ -35,7 +35,7 @@ const Reservation = () => {
             <Form.Control type="number" min="1" max="20" required />
           </Form.Group>
           <Button variant="primary" type="submit">
-            Submit
+            Reserve
           </Button>
         </Form>
       </div>

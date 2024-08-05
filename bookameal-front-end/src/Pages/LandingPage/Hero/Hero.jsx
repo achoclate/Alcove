@@ -3,10 +3,12 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Hero.css'; // Custom CSS file for additional styling
+import heroImage from '/home/achoclate/BookaMeal/bookameal-front-end/src/assets/heroImage.jpeg'
+// import heroImage from '../../assets/heroImage.jpeg'; // Ensure this path is correct
 
 const Hero = () => {
   return (
-    <div className="hero-container" style={{ backgroundColor: 'black' }}>
+    <div className="hero-container" style={{ backgroundImage: `url(${heroImage})` }}>
       <Container className="hero-content">
         <Row className="justify-content-center text-center">
           <Col md={8}>
