@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
+<<<<<<< HEAD
 
 // import { FooterOverlay, Newsletter } from '../../components';
 import images from '../../constants/images';
@@ -20,12 +21,30 @@ const Footer = () => (
         <p className="p__opensans">&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
         <img src={images.spoon} alt="" className="spoon__img" style={{ marginTop: 15 }} />
         <div className="app__footer-links_icons">
+=======
+import './Footer.css';
+
+const Footer = () => (
+  <div className="footer" id="login" style={{ backgroundColor: 'black' }}>
+    <div className="footer-links">
+      <div className="footer-contact">
+        <h1>Contact Us</h1>
+        <p>Westlands, Nairobi, NBO 10019, Kenya</p>
+        <p>+254 72-344-1230</p>
+        <p>+254 72-555-1230</p>
+      </div>
+
+      <div className="footer-logo">
+        <p>&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
+        <div className="footer-icons">
+>>>>>>> Ann/Feature/BOOK-28-Footer
           <FiFacebook />
           <FiTwitter />
           <FiInstagram />
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="app__footer-links_work">
         <h1 className="app__footer-headtext">Working Hours</h1>
         <p className="p__opensans">Monday-Friday:</p>
@@ -37,6 +56,19 @@ const Footer = () => (
 
     <div className="footer__copyright">
       <p className="p__opensans">2024 Alcove. All Rights reserved.</p>
+=======
+      <div className="footer-work">
+        <h1>Working Hours</h1>
+        <p>Monday-Friday:</p>
+        <p>08:00 am - 12:00 am</p>
+        <p>Saturday-Sunday:</p>
+        <p>07:00 am - 11:00 pm</p>
+      </div>
+    </div>
+
+    <div className="footer-copyright">
+      <p>2024 Alcove. All Rights reserved.</p>
+>>>>>>> Ann/Feature/BOOK-28-Footer
     </div>
   </div>
 );
