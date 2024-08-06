@@ -1,23 +1,33 @@
 import React from "react";
-import "./Login.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import loginBackground from "../../assets/login.jpeg"; // Import the background image
+import "./Login.css";
+
 const LoginPage = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   // Function to handle login button click
   const handleLogin = (e) => {
     e.preventDefault();
-    history("/");
+    navigate("/");
   };
 
   // Redirect to signup page function
   const handleRegister = () => {
-    history("/signup");
+    navigate("/signup");
   };
 
   return (
-    <div className="wrapper">
+    <div
+      className="wrapper"
+      style={{
+        backgroundImage: `url(${loginBackground})`, // Use the imported image
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <form onSubmit={handleLogin}>
         <h1>Login</h1>
         <div className="input-box">

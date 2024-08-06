@@ -7,6 +7,8 @@ import Hero from './Pages/LandingPage/Hero/Hero';
 import Chef from './Pages/LandingPage/Chef/Chef';
 import Reservation from './Pages/Reservation/Reservation';
 import AboutUs from './Pages/About/About';
+import Login from './components/Login page/Login';
+import SignUp from './components/Sign up/SignUp';
 import './App.css';
 import Footer from './components/Footer/Footer';
 
@@ -20,8 +22,10 @@ const App = () => (
           <Chef />
         </>
       } />
-      <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
-      <Route path="/reservation" element={<Reservation />} /> {/* Reservation page route */}
+      <Route path="/about" element={<AboutUs />} /> 
+      <Route path="/reservation" element={<Reservation />} /> 
+      <Route path="/login" element={<Login />} /> 
+      <Route path="/signup" element={<SignUp />} /> 
     </Routes>
     <Footer/>
   </Router>

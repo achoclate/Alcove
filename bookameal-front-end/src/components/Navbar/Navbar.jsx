@@ -16,6 +16,7 @@ const Navigationbar = () => {
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="#menu">Menu</Nav.Link>
             <Nav.Link as={Link} to="#contact">Contact</Nav.Link>
+            
             <NavDropdown title="Our Brands" id="basic-nav-dropdown" className="navbar-dropdown">
               <NavDropdown.Item as={Link} to="#brand1">Ocean's Bounty</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="#brand2">Dough & Stone</NavDropdown.Item>
@@ -23,7 +24,9 @@ const Navigationbar = () => {
             </NavDropdown>
           </Nav>
           <div className="navbar-user-icon">
-            <FaRegUserCircle size="1.5em" />
+            <Link to="/login">
+              <FaRegUserCircle size="1.5em" />
+            </Link>
           </div>
         </Navbar.Collapse>
       </Container>

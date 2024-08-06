@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Signup.css";
+import "./SignUp.css" 
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
+import loginBackground from "../../assets/login.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
@@ -63,7 +64,13 @@ const SignUp = () => {
     history("/login");
   };
   return (
-    <div className="wrapper">
+    <div className="wrapper"
+    style={{
+      backgroundImage: `url(${loginBackground})`, // Use the imported image
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}>
       <form onSubmit={handleSignup}>
         <h1>Signup</h1>
         <div className="input-box">

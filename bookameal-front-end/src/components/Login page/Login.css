@@ -1,5 +1,6 @@
 .wrapper {
   width: 420px;
+  background-image: url('../../assets/login.jpeg'); 
   /* background: rgb(11, 16, 77); */
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
