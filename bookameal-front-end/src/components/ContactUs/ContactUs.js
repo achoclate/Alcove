@@ -1,29 +1,3 @@
-// // src/components/ContactUs/ContactUs.jsx
-
-// import React from "react";
-// import ContactUsForm from "./ContactUsForm";
-// import "./ContactUs.css";
-
-// const ContactUs = () => {
-//   return (
-//     <div className="contact-us">
-//       <div className="contact-image">
-//         <img
-//           src={`${process.env.PUBLIC_URL}/images/contact.jpg`}
-//           alt="Contact Us"
-//         />
-//       </div>
-//       <div className="contact-form">
-//         <h2>Contact Us</h2>
-//         <ContactUsForm />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ContactUs;
-// src/components/ContactUs/ContactUs.jsx
-
 import React, { useState } from "react";
 import "./ContactUs.css";
 

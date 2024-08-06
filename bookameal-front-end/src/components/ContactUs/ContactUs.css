@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background-image: url("${process.env.PUBLIC_URL}/images/contact.jpg"); */
+  background-image: url(./public/images/contact.jpg);
   background-size: cover;
   background-position: center;
   padding: 2rem;
@@ -53,7 +53,7 @@
   background-color: #ff0909;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
   margin-top: 1rem;
 }
