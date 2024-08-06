@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 3rem; /* Reduced margin-top */
+    margin-top: 2rem; /* Reduced margin-top */
     padding: 0 1rem; /* Reduced padding */
 }
 
@@ -28,17 +28,17 @@
 }
 
 .footer-logo img {
-    width: 150px; /* Reduced logo width */
+    width: 150px; /* Reduced width */
     margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer-icons {
-    margin-top: 0.25rem; /* Reduced margin-top */
+    margin-top: 0.5rem;
 }
 
 .footer-icons svg {
     color: var(--color-white);
-    margin: 0.25rem; /* Reduced margin */
+    margin: 0.5rem;
     font-size: 20px; /* Reduced font size */
     cursor: pointer;
 }
@@ -54,7 +54,7 @@
     letter-spacing: 0.04em;
     text-transform: capitalize;
     font-size: 24px; /* Reduced font size */
-    line-height: 32px; /* Adjusted line-height */
+    line-height: 32px; /* Adjusted line height */
     margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
@@ -62,7 +62,7 @@
     font-family: var(--font-base);
     color: var(--color-white);
     font-size: 14px; /* Reduced font size */
-    line-height: 20px; /* Adjusted line-height */
+    line-height: 20px; /* Adjusted line height */
     margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
@@ -72,8 +72,8 @@
 
 @media screen and (min-width: 2000px) {
     .footer h1 {
-        font-size: 30px; /* Adjusted for larger screens */
-        line-height: 38px;
+        font-size: 36px; /* Reduced font size for large screens */
+        line-height: 44px; /* Adjusted line height */
     }
 }
 
@@ -87,7 +87,7 @@
     .footer-contact,
     .footer-logo,
     .footer-work {
-        margin: 1rem 0; /* Adjusted margin */
+        margin: 1rem 0; /* Reduced margin */
         width: 100%;
     }
 }
@@ -100,6 +100,6 @@
 
 @media screen and (max-width: 350px) {
     .footer-logo img {
-        width: 70%; /* Reduced logo width */
+        width: 70%; /* Reduced width for very small screens */
     }
 }
