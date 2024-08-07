@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Signup.css";
+import "./SignUp.css";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const SignUp = () => {
     return regex.test(input);
   };
 
-  const handleSignup = (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
     history("/");
     // Perform input validation
@@ -64,8 +64,8 @@ const SignUp = () => {
   };
   return (
     <div className="wrapper">
-      <form onSubmit={handleSignup}>
-        <h1>Signup</h1>
+      <form onSubmit={handleSignUp}>
+        <h1>SignUp</h1>
         <div className="input-box">
           <input
             type="text"
@@ -108,7 +108,7 @@ const SignUp = () => {
             <FaLock className="icon" />
           </div>
         )}
-        <button type="submit">Signup</button>
+        <button type="submit">SignUp</button>
         <div className="register-link">
           <p>
             Already have an account?{" "}
