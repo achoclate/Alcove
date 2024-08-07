@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Chicken wings",
+    "image": "/menu-img/chicken-wings.jpeg",
+    "category": "Full Meals",
+    "description": "A delicious grilled chicken served with vegetables.",
+    "price": 12.99
+  },
+  {
+    "id": 2,
+    "name": "Chocolate Cake",
+    "image": "/menu-img/cake.jpeg",
+    "category": "Dessert",
+    "description": "Rich and moist chocolate cake topped with ganache.",
+    "price": 6.50
+  },
+  {
+    "id": 3,
+    "name": "Mojito",
+    "image": "/menu-img/drink1.jpg",
+    "category": "Drinks",
+    "description": "A refreshing mojito made with fresh mint leaves.",
+    "price": 4.75
+  },
+  {
+    "id": 4,
+    "name": "Caesar Salad",
+    "image": "/menu-img/veg-salad.jpeg",
+    "category": "Salads",
+    "description": "Crisp romaine lettuce with creamy Caesar dressing.",
+    "price": 8.25
+  },
+  {
+    "id": 5,
+    "name": "Mexican tacos",
+    "image": "/menu-img/food5.jpeg",
+    "category": "Pizzas",
+    "description": "A classic Hawaiian pizza with ham and pineapple toppings.",
+    "price": 12.99
+  }
+]

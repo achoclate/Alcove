@@ -1,30 +1,27 @@
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigationbar from './components/Navbar/Navbar';
-import Hero from './Pages/LandingPage/Hero/Hero';
-import Chef from './Pages/LandingPage/Chef/Chef';
-import Reservation from './Pages/Reservation/Reservation';
-import AboutUs from './Pages/About/About';
-import './App.css';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/sidebar/Sidebar";
+import Topbar from "./components/topbar/Topbar";
+import "./App.css";
+import Home from "./pages/home/Home";
+import UserList from "./pages/userList/UserList";
+import User from "./pages/user/User";
+import NewUser from "./pages/newUser/NewUser";
 
-const App = () => (
-  <Router>
-    <Navigationbar /> {/* Add Navigationbar here to appear on every page */}
-    <Routes>
-      <Route path="/" element={
-        <>
-          <Hero />
-          <Chef />
-        </>
-      } />
-      <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
-      <Route path="/reservation" element={<Reservation />} /> {/* Reservation page route */}
-    </Routes>
-    <Footer/>
-  </Router>
-);
+function App() {
+  return (
+    <Router>
+      <Topbar />
+      <div className="container">
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<UserList />} />
+          <Route path="/user/:userId" element={<User />} />
+          <Route path="/newUser" element={<NewUser />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 export default App;
