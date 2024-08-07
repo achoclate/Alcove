@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
-import "./Navbar.css"; // Import the CSS file
+import "./Navbar.css";
 
 const NavigationBar = () => {
   return (
@@ -20,15 +20,15 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="#contact">
+            <Nav.Link as={Link} to="/contact">
               Contact
             </Nav.Link>
-            <Nav.Link as={Link} to="#menu">
+            <Nav.Link as={Link} to="/menu">
               Menu
             </Nav.Link>
-            <Nav.Link as={Link} to="#contact">
+            {/* <Nav.Link as={Link} to="#contact">
               Contact
-            </Nav.Link>
+            </Nav.Link> */}
             <NavDropdown
               title="Our Brands"
               id="basic-nav-dropdown"

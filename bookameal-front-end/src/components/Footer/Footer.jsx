@@ -1,9 +1,9 @@
-import React from 'react';
-import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
-import './Footer.css';
+import React from "react";
+import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
+import "./Footer.css";
 
 const Footer = () => (
-  <div className="footer" id="login" style={{ backgroundColor: 'black' }}>
+  <div className="footer" id="login" style={{ backgroundColor: "black" }}>
     <div className="footer-links">
       <div className="footer-contact">
         <h1>Contact Us</h1>
@@ -13,7 +13,10 @@ const Footer = () => (
       </div>
 
       <div className="footer-logo">
-        <p>&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
+        <p>
+          &quot;The best way to find yourself is to lose yourself in the service
+          of others.&quot;
+        </p>
         <div className="footer-icons">
           <FiFacebook />
           <FiTwitter />

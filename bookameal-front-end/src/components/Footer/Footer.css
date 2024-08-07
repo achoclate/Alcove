@@ -1,105 +1,105 @@
 .footer {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black !important;
-    color: white; /* Ensure text is white for visibility */
-    padding: 1rem 0; /* Reduced padding */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black !important;
+  color: white; /* Ensure text is white for visibility */
+  padding: 1rem 0; /* Reduced padding */
 }
 
 .footer-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 2rem; /* Reduced margin-top */
-    padding: 0 1rem; /* Reduced padding */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem; /* Reduced margin-top */
+  padding: 0 1rem; /* Reduced padding */
 }
 
 .footer-contact,
 .footer-logo,
 .footer-work {
-    flex: 1;
-    margin: 0.5rem; /* Reduced margin */
-    text-align: center;
+  flex: 1;
+  margin: 0.5rem; /* Reduced margin */
+  text-align: center;
 }
 
 .footer-logo img {
-    width: 150px; /* Reduced width */
-    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+  width: 150px; /* Reduced width */
+  margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer-icons {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .footer-icons svg {
-    color: var(--color-white);
-    margin: 0.5rem;
-    font-size: 20px; /* Reduced font size */
-    cursor: pointer;
+  color: var(--color-white);
+  margin: 0.5rem;
+  font-size: 20px; /* Reduced font size */
+  cursor: pointer;
 }
 
 .footer-icons svg:hover {
-    color: var(--color-golden);
+  color: var(--color-golden);
 }
 
 .footer h1 {
-    font-family: var(--font-base);
-    color: var(--color-white);
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    font-size: 24px; /* Reduced font size */
-    line-height: 32px; /* Adjusted line height */
-    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-size: 24px; /* Reduced font size */
+  line-height: 32px; /* Adjusted line height */
+  margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer p {
-    font-family: var(--font-base);
-    color: var(--color-white);
-    font-size: 14px; /* Reduced font size */
-    line-height: 20px; /* Adjusted line height */
-    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-size: 14px; /* Reduced font size */
+  line-height: 20px; /* Adjusted line height */
+  margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .footer-copyright {
-    margin-top: 1.5rem; /* Reduced margin-top */
+  margin-top: 1.5rem; /* Reduced margin-top */
 }
 
 @media screen and (min-width: 2000px) {
-    .footer h1 {
-        font-size: 36px; /* Reduced font size for large screens */
-        line-height: 44px; /* Adjusted line height */
-    }
+  .footer h1 {
+    font-size: 36px; /* Reduced font size for large screens */
+    line-height: 44px; /* Adjusted line height */
+  }
 }
 
 @media screen and (max-width: 1150px) {
-    .footer-links {
-        align-items: center;
-        flex-direction: column;
-        padding: 0;
-    }
+  .footer-links {
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
 
-    .footer-contact,
-    .footer-logo,
-    .footer-work {
-        margin: 1rem 0; /* Reduced margin */
-        width: 100%;
-    }
+  .footer-contact,
+  .footer-logo,
+  .footer-work {
+    margin: 1rem 0; /* Reduced margin */
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    .footer {
-        padding: 0 0 1rem 0; /* Adjusted padding */
-    }
+  .footer {
+    padding: 0 0 1rem 0; /* Adjusted padding */
+  }
 }
 
 @media screen and (max-width: 350px) {
-    .footer-logo img {
-        width: 70%; /* Reduced width for very small screens */
-    }
+  .footer-logo img {
+    width: 70%; /* Reduced width for very small screens */
+  }
 }
