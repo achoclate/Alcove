@@ -13,6 +13,7 @@ import SignUp from "./components/SignUp/SignUp";
 import MenuList from "./components/MenuPage/MenuList";
 import Login from "./components/Login/Login";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Orders from "./Pages/Orders/Orders";
 
 const App = () => (
   <Router>
@@ -33,6 +34,7 @@ const App = () => (
       <Route path="/signup" element={<SignUp />} />{" "}
       <Route path="/contact" element={<ContactUs />} />{" "}
       <Route path="/menu" element={<MenuList />} />{" "}
+      <Route path="/orders" element={<Orders />} />{" "}
     </Routes>
     <Footer />
   </Router>

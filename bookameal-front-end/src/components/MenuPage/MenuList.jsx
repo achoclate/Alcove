@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MealCard from "./MealCard";
+import Orders from "../../Pages/Orders/Orders";
 import "./MenuList.css";
 
 const MenuList = () => {
@@ -7,6 +8,8 @@ const MenuList = () => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [sortType, setSortType] = useState("name");
+  const [orders, setOrders] = useState([]);
+  const [notificationCount, setNotificationCount] = useState(0);
 
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
@@ -16,7 +19,7 @@ const MenuList = () => {
         if (data.meals) {
           const mealsWithPrice = data.meals.map((meal) => ({
             ...meal,
-            price: (Math.random() * 20 + 5).toFixed(2),
+            price: (Math.random() * 20 + 35).toFixed(2),
           }));
           setMeals(mealsWithPrice);
           setError(false);
@@ -31,7 +34,13 @@ const MenuList = () => {
         setError(true);
       });
   }, []);
-
+  const addOrder = (order) => {
+    const updatedOrders = [...orders, order];
+    setOrders(updatedOrders);
+    localStorage.setItem("orders", JSON.stringify(updatedOrders));
+    setNotificationCount(notificationCount + 1);
+    sendEmailNotification(order);
+  };
   const handleSort = (type) => {
     const sortedMeals = [...meals].sort((a, b) => {
       if (type === "price") {
@@ -43,11 +52,14 @@ const MenuList = () => {
     setMeals(sortedMeals);
     setSortType(type);
   };
-
+  const sendEmailNotification = (order) => {
+    // Implement backend service
+    console.log("Sending email notification for order:", order);
+  };
   return (
     <div className="main">
       <div className="heading">
-        <h1>Welcome to Munch Food!</h1>
+        <h1>Welcome to Alcove Culnary!</h1>
         <h4>
           Discover a variety of delicious meals. Click on a meal to learn more
           about it.
@@ -72,8 +84,23 @@ const MenuList = () => {
             No meals found. Please check back later for updates.
           </p>
         ) : (
-          meals.map((meal) => <MealCard key={meal.idMeal} meal={meal} />)
+          // meals.map((meal) => <MealCard key={meal.idMeal} meal={meal} />)
+          <div className="meal-section">
+            <h1>OUR MENU</h1>
+            <div className="menu-section">
+              {meals.map((meal) => (
+                <MealCard key={meal.idMeal} meal={meal} addOrder={addOrder} />
+              ))}
+            </div>
+          </div>
         )}
+      </div>
+      <Orders
+        orders={orders}
+        resetNotification={() => setNotificationCount(0)}
+      />
+      <div className="notification-icon">
+        {notificationCount > 0 && <span>{notificationCount}</span>}
       </div>
     </div>
   );
