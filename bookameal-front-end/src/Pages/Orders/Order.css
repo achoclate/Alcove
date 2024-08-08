@@ -1,0 +1,24 @@
+.order {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.order-details p {
+  font-size: 1rem;
+  margin: 4px 0;
+}
