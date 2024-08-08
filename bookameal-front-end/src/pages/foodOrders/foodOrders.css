@@ -1,0 +1,32 @@
+/* src/pages/foodOrders/foodOrders.css */
+.foodOrders {
+    flex: 4;
+    padding: 20px;
+  }
+  
+  .foodOrdersTitle {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .foodOrdersTableContainer {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .foodOrdersTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .foodOrdersTable th,
+  .foodOrdersTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .foodOrdersTable th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  

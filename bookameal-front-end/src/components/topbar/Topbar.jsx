@@ -1,14 +1,20 @@
-import React from "react";
+// src/components/topbar/Topbar.js
+import React, { useState } from "react";
 import "./topbar.css";
-import { NotificationsNone, Language, Settings } from "@material-ui/icons";
+import { NotificationsNone, Language, Settings, AccountCircle } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 export default function Topbar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <div className="topbar">
       <div className="topbarWrapper">
-        <div className="topLeft">
-          <span className="logo">Alcove admin</span>
-        </div>
+        <div className="logo">Admin Panel</div>
         <div className="topRight">
           <div className="topbarIconContainer">
             <NotificationsNone />
@@ -18,10 +24,22 @@ export default function Topbar() {
             <Language />
             <span className="topIconBadge">2</span>
           </div>
-          <div className="topbarIconContainer">
+          <div className="topbarIconContainer" onClick={toggleDropdown}>
             <Settings />
           </div>
-          <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
+          <div className="topbarProfileContainer">
+            <AccountCircle className="topAvatar" onClick={toggleDropdown} />
+            {dropdownOpen && (
+              <div className="profileDropdown">
+                <Link to="/profile" className="dropdownItem">
+                  Profile
+                </Link>
+                <Link to="/logout" className="dropdownItem">
+                  LogOut
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

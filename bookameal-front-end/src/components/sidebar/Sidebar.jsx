@@ -1,19 +1,7 @@
-import "./sidebar.css";
-import {
-  LineStyle,
-  Timeline,
-  TrendingUp,
-  PermIdentity,
-  Storefront,
-  AttachMoney,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
-} from "@material-ui/icons";
+// src/components/sidebar/Sidebar.js
 import { Link } from "react-router-dom";
+import "./sidebar.css";
+import { Home, Group, Payment, Restaurant, MenuBook, Fastfood } from "@material-ui/icons";
 
 export default function Sidebar() {
   return (
@@ -23,37 +11,41 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+              <li className="sidebarListItem">
+                <Home className="sidebarIcon" />
+                Home
+              </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Menu
-            </li>
-            <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <Group className="sidebarIcon" />
                 Users
               </li>
+            </Link>
+            <Link to="/transactions" className="link">
               <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Orders
+                <Payment className="sidebarIcon" />
+                Transactions
               </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <ul className="sidebarList">
-            <Link to="/users" className="link">
-              
             </Link>
-            <Link to="/products" className="link">
-              
+            <Link to="/food-orders" className="link">
+              <li className="sidebarListItem">
+                <Restaurant className="sidebarIcon" />
+                Food Orders
+              </li>
             </Link>
+            <Link to="/food-menu" className="link">
+              <li className="sidebarListItem">
+                <MenuBook className="sidebarIcon" />
+                Food Menu
+              </li>
+            </Link>
+            {/* <Link to="/meals" className="link">
+              <li className="sidebarListItem">
+                <Fastfood className="sidebarIcon" />
+                Meals
+              </li>
+            </Link> */}
           </ul>
         </div>
       </div>
