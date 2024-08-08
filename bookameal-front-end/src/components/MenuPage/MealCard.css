@@ -106,7 +106,7 @@
   margin: 0 20px;
 }
 .card-container .card {
-  flex: 1 1 calc(10% - 16px);
+  flex: 1 1 calc(33.33% - 16px);
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 8px;
