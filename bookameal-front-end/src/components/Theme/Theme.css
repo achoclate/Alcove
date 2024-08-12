@@ -1,5 +1,4 @@
-/* Define global styles */
-body {
+Define global styles body {
   margin: 0;
   font-family: "Arial", sans-serif;
   background-color: #f4f6f8; /* Light background color */
@@ -13,20 +12,17 @@ h1 {
 
 /* Custom button styles */
 .custom-button {
-  background-color: red; /* Set button background color to red */
+  background-color: #1976d2; /* Matches primary color */
   color: white;
-  padding: 10px 20px; /* Add some padding inside the button */
+  padding: 8px 16px;
   border: none;
-  border-radius: 50px; /* Round the button's corners */
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  position: absolute; /* Position the button relative to its container */
-  right: 30px; /* Position it 30px from the right edge */
-  top: 30px; /* Position it 30px from the top edge */
 }
 
 .custom-button:hover {
-  background-color: darkred; /* Slightly darker shade of red for hover state */
+  background-color: #115293; /* Slightly darker shade of primary */
 }
 
 /* Dark mode specific overrides */
@@ -40,9 +36,9 @@ body.dark-mode h1 {
 }
 
 body.dark-mode .custom-button {
-  background-color: red;
+  background-color: #90caf9;
 }
 
 body.dark-mode .custom-button:hover {
-  background-color: darkred;
+  background-color: #648dae;
 }
