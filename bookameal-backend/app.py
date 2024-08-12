@@ -1,3 +1,5 @@
+# app.py
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
@@ -19,6 +21,15 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
+
+class Reservation(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    phone = db.Column(db.String(20), nullable=False)
+    date = db.Column(db.Date, nullable=False)
+    time = db.Column(db.Time, nullable=False)
+    guests = db.Column(db.Integer, nullable=False)
 
 # Routes
 @app.route('/signup', methods=['POST'])
@@ -73,8 +84,6 @@ def update_profile():
     email = data.get('email')
     password = data.get('password')
 
-    # You will need a way to identify the logged-in user, such as a token
-    # For demonstration purposes, we'll use the email from the request to find the user
     user = User.query.filter_by(email=email).first()
     if not user:
         return jsonify({"message": "User not found!"}), 404
@@ -95,9 +104,33 @@ def update_profile():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-    # Handle server-side session invalidation if needed
-    # This example assumes client-side token handling
     return jsonify({"message": "Logged out successfully!"}), 200
+
+# New Route for Creating a Reservation
+@app.route('/reservations', methods=['POST'])
+def create_reservation():
+    data = request.get_json()
+    name = data.get('name')
+    email = data.get('email')
+    phone = data.get('phone')
+    date = data.get('date')
+    time = data.get('time')
+    guests = data.get('guests')
+
+    if not name or not email or not phone or not date or not time or not guests:
+        return jsonify({"message": "All fields are required!"}), 400
+
+    new_reservation = Reservation(
+        name=name, email=email, phone=phone, date=date, time=time, guests=guests
+    )
+
+    try:
+        db.session.add(new_reservation)
+        db.session.commit()
+        return jsonify({"message": "Reservation created successfully!"}), 201
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"message": f"Error creating reservation: {str(e)}"}), 500
 
 if __name__ == "__main__":
     with app.app_context():

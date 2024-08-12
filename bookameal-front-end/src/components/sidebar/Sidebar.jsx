@@ -1,7 +1,15 @@
 // src/components/sidebar/Sidebar.js
 import { Link } from "react-router-dom";
 import "./sidebar.css";
-import { Home, Group, Payment, Restaurant, MenuBook, Fastfood } from "@material-ui/icons";
+import {
+  Home,
+  Group,
+  Payment,
+  Restaurant,
+  MenuBook,
+  Fastfood,
+  Event,
+} from "@material-ui/icons";
 
 export default function Sidebar() {
   return (
@@ -40,12 +48,18 @@ export default function Sidebar() {
                 Food Menu
               </li>
             </Link>
-            {/* <Link to="/meals" className="link">
+            <Link to="/meals" className="link">
               <li className="sidebarListItem">
                 <Fastfood className="sidebarIcon" />
                 Meals
               </li>
-            </Link> */}
+            </Link>
+            <Link to="/reservations" className="link">
+              <li className="sidebarListItem">
+                <Event className="sidebarIcon" />
+                Reservations
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

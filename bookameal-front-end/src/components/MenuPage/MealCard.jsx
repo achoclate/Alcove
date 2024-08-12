@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./MealCard.css";
 
 const MealCard = ({ meal }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [mealDetails, setMealDetails] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (showPopup && meal?.idMeal) {
@@ -27,17 +29,27 @@ const MealCard = ({ meal }) => {
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
+  const handleOrderClick = () => {
+    navigate("/orders");
+  };
 
   return (
     <>
-      <div className="card" onClick={togglePopup}>
-        <img
-          src={meal.strMealThumb || "fallback-image.jpg"}
-          alt={meal.strMeal || "Meal Image"}
-        />
-        <div className="info">
-          <h2>{meal.strMeal || "Meal Name"}</h2>
-          <p>${meal.price || "Price"}</p>
+      <div className="card-container">
+        <div className="card">
+          <div className="card-section" onClick={togglePopup}>
+            <img
+              src={meal.strMealThumb || "fallback-image.jpg"}
+              alt={meal.strMeal || "Meal Image"}
+            />
+            <div className="info">
+              <h2>{meal.strMeal || "Meal Name"}</h2>
+              <p>${meal.price || "Price"}</p>
+              <button className="order-now-button" onClick={handleOrderClick}>
+                Order Now
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       {showPopup && mealDetails && (
@@ -49,15 +61,18 @@ const MealCard = ({ meal }) => {
               alt={mealDetails.strMeal || "Meal Image"}
             />
             <h3>Ingredients</h3>
-            <ul>
-              {Array.from({ length: 20 }).map((_, index) => {
-                const ingredient = mealDetails[`strIngredient${index + 1}`];
-                return ingredient ? <li key={index}>{ingredient}</li> : null;
-              })}
-            </ul>
+            <p className="ingredients">
+              {Array.from({ length: 20 })
+                .map((_, index) => mealDetails[`strIngredient${index + 1}`])
+                .filter(Boolean)
+                .join(", ")}
+            </p>
             <h3>Description</h3>
             <p>{mealDetails.strInstructions || "No description available"}</p>
-            <button onClick={togglePopup}>Close</button>
+            <button className="order-now-button">Order Now</button>
+            <button className="close-button" onClick={togglePopup}>
+              Close
+            </button>
           </div>
         </div>
       )}
