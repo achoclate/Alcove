@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import loginBackground from "../../assets/login.jpeg"; // Import the background image
 import "./Login.css";
 
-const LoginPage = () => {
+const Login = () => {
   const navigate = useNavigate();
 
   // Function to handle login button click
@@ -59,4 +59,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;
