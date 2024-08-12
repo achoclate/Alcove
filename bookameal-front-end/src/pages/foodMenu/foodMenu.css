@@ -1,57 +1,59 @@
 /* src/pages/foodMenu/foodMenu.css */
 .foodMenu {
-    flex: 4;
-    padding: 20px;
-  }
-  
-  .foodMenuTitle {
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  .foodMenuForm {
-    margin-bottom: 20px;
-  }
-  
-  .foodMenuForm input {
-    margin-right: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .foodMenuForm button {
-    padding: 8px 16px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .foodMenuTableContainer {
-    margin-top: 20px;
-    overflow-x: auto;
-  }
-  
-  .foodMenuTable {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .foodMenuTable th,
-  .foodMenuTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .foodMenuTable th {
-    background-color: #f4f4f4;
-    text-align: left;
-  }
-  
-  .foodImage {
-    max-width: 100px;
-    height: auto;
-  }
-  
+  flex: 4;
+  padding: 20px;
+}
+
+.foodMenuTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.foodMenuForm {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.foodMenuForm input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.foodMenuForm button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.foodMenuTableContainer {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.foodMenuTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.foodMenuTable th,
+.foodMenuTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.foodMenuTable th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.foodImage {
+  max-width: 100px;
+  height: auto;
+}

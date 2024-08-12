@@ -1,0 +1,110 @@
+/* General container styling */
+.main {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Enable scrolling for the main container */
+}
+
+/* Heading styles */
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  color: black; /* Set color to black */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make text bold */
+  margin: 20px 0; /* Add spacing around the heading */
+}
+
+.heading h4 {
+  color: black; /* Set color to black for the subheading */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  margin: 10px 0; /* Add spacing around the subheading */
+}
+
+/* Filter button styling */
+.filters {
+  margin: 20px 0;
+  text-align: center;
+  display: flex; /* Use flexbox to align buttons in a line */
+  justify-content: center; /* Center align buttons horizontally */
+  flex-wrap: nowrap; /* Prevent buttons from wrapping to a new line */
+}
+
+.filters button {
+  margin: 0 10px;
+  padding: 10px 20px; /* Adjust padding for better button size */
+  border: none;
+  background-color: #0a315a;
+  color: white;
+  border-radius: 8px; /* Slightly larger border-radius for a modern look */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for a subtle scale effect */
+}
+
+.filters button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.filters button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add custom focus outline */
+}
+
+/* Container for flex layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling for 'not found' and 'loading' messages */
+.notFound,
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.notFound {
+  color: red;
+}
+
+.loading {
+  color: blue;
+}
+
+/* Meal section styling */
+.meal-section {
+  margin-top: 44px;
+}
+
+.meal-section h1 {
+  text-align: center;
+}
+
+/* Menu section styling */
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Notification icon styling */
+.notification-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  /* background-color: red; */
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  z-index: 1000;
+}

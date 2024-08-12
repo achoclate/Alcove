@@ -1,44 +1,55 @@
+/* Ensure the body or main container has no padding/margin that affects positioning */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .sidebar {
-    flex: 1;
-    height: calc(100vh - 50px);
-    background-color: rgb(251, 251, 255);
-    position: sticky;
-    top: 50px;
-  }
-  
-  .sidebarWrapper {
-    padding: 20px;
-    color: #555;
-  }
-  
-  .sidebarMenu {
-    margin-bottom: 10px;
-  }
-  
-  .sidebarTitle {
-    font-size: 13px;
-    color: rgb(187, 186, 186);
-  }
-  
-  .sidebarList {
-    list-style: none;
-    padding: 5px;
-  }
-  
-  .sidebarListItem {
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-  }
-  
-  .sidebarListItem.active,
-  .sidebarListItem:hover {
-    background-color: rgb(240, 240, 255);
-  }
-  
-  .sidebarIcon{
-      margin-right: 5px;
-      font-size: 20px !important;
-  }
+  width: 250px; /* Set a fixed width for the sidebar */
+  height: calc(100vh - 50px);
+  background-color: rgb(251, 251, 255);
+  position: fixed; /* Change to fixed positioning */
+  top: 50px; /* Adjust based on your layout */
+  left: 0; /* Align to the left edge of the viewport */
+  border-right: 1px solid #ddd; /* Optional: add a border for better separation */
+}
+
+.sidebarWrapper {
+  padding: 20px;
+  color: #555;
+  overflow-y: auto; /* Allows scrolling if the content overflows */
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  color: rgb(187, 186, 186);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.sidebarListItem {
+  padding: 10px 15px; /* Increase padding for better spacing */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  background-color: rgb(240, 240, 255);
+}
+
+.sidebarIcon {
+  margin-right: 10px; /* Increased margin for better spacing */
+  font-size: 20px !important;
+}
