@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import MealCard from "./MealCard";
-// import Orders from "../../pages/Orders/Orders";
 import "./MenuList.css";
 
 const MenuList = () => {
@@ -10,6 +9,8 @@ const MenuList = () => {
   const [sortType, setSortType] = useState("name");
   const [orders, setOrders] = useState([]);
   const [notificationCount, setNotificationCount] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterOption, setFilterOption] = useState("strMeal");
 
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
@@ -55,6 +56,18 @@ const MenuList = () => {
     setSortType(type);
   };
 
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  const handleFilterChange = (e) => {
+    setFilterOption(e.target.value);
+  };
+
+  const filteredMeals = meals.filter((meal) =>
+    meal[filterOption].toLowerCase().includes(searchTerm)
+  );
+
   const sendEmailNotification = (order) => {
     // Implement backend service
     console.log("Sending email notification for order:", order);
@@ -70,11 +83,18 @@ const MenuList = () => {
         </h4>
       </div>
       <div className="filters">
-        <button onClick={() => handleSort("strMeal")}>Sort by Name</button>
-        <button onClick={() => handleSort("strCategory")}>
-          Sort by Category
-        </button>
-        <button onClick={() => handleSort("price")}>Sort by Price</button>
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+        <select value={filterOption} onChange={handleFilterChange}>
+          <option value="strMeal">Name</option>
+          <option value="strCategory">Category</option>
+          <option value="price">Price</option>
+        </select>
+        {/* <button onClick={() => handleSort(sortType)}>Sort</button> */}
       </div>
       <div className="container">
         {loading ? (
@@ -83,7 +103,7 @@ const MenuList = () => {
           <p className="notFound">
             Sorry, there was an error fetching meals. Please try again later.
           </p>
-        ) : meals.length === 0 ? (
+        ) : filteredMeals.length === 0 ? (
           <p className="notFound">
             No meals found. Please check back later for updates.
           </p>
@@ -91,18 +111,13 @@ const MenuList = () => {
           <div className="meal-section">
             <h1>OUR MENU</h1>
             <div className="menu-section">
-              {meals.map((meal) => (
+              {filteredMeals.map((meal) => (
                 <MealCard key={meal.idMeal} meal={meal} addOrder={addOrder} />
               ))}
             </div>
           </div>
         )}
       </div>
-      {/* Uncomment and fix the Orders component if needed */}
-      {/* <Orders
-        orders={orders}
-        resetNotification={() => setNotificationCount(0)}
-      /> */}
       <div className="notification-icon">
         {notificationCount > 0 && <span>{notificationCount}</span>}
       </div>

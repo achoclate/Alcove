@@ -18,9 +18,9 @@ const Navigationbar = () => {
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
             
             <NavDropdown title="Our Brands" id="basic-nav-dropdown" className="navbar-dropdown">
-              <NavDropdown.Item as={Link} to="#brand1">Ocean's Bounty</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#brand2">Dough & Stone</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#brand3">Steak & Smokehouse</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="#Ocean's Bounty">Ocean's Bounty</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="#Dough & Stone">Dough & Stone</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="#Steak & Smokehouse">Steak & Smokehouse</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <div className="navbar-user-icon">
