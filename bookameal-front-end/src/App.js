@@ -18,7 +18,8 @@ import Profile from "./pages/profile/Profile";
 import Logout from "./pages/logout/Logout";
 // import Login from "./pages/Login";
 import LoginPage from "./components/Login/Login";
-import Signup from "./pages/Signup";
+// import Signup from "./pages/Signup";
+import SignUp from "./components/Sign up/SignUp";
 import Navigationbar from "./components/Navbar/Navbar";
 import Hero from "./pages/LandingPage/Hero/Hero";
 import Chef from "./pages/LandingPage/Chef/Chef";
@@ -120,7 +121,7 @@ function App() {
           path="/login"
           element={<Login setAuthenticated={setAuthenticated} />}
         /> */}
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
