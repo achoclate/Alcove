@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem; /* Reduced margin to decrease space at the top */
     color: white; 
 }
 
@@ -10,19 +10,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    color: white; 
-}
-
-.app__chef-content_quote img {
-    width: 47px;
-    height: 40px;
-    margin: 0 1rem 1rem 0;
+    margin-bottom: 1.5rem; /* Add margin-bottom to reduce space below the quote */
     color: white; 
 }
 
 .app__chef-sign {
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem; /* Reduced margin to decrease space above the signature */
     color: white; 
 }
 
@@ -30,25 +24,8 @@
     font-family: var(--font-base);
     font-weight: 400;
     font-size: 32px;
-    line-height: 41.6px;
+    line-height: 38px; /* Reduced line-height to decrease space between lines */
     letter-spacing: 0.04em;
     text-transform: capitalize;
     color: var(--color-golden);
-}
-
-.app__chef-sign img {
-    width: 250px;
-    margin-top: 3rem;
-}
-
-@media screen and (min-width: 2000px) {
-    .app__chef-sign img {
-        width: 370px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .app__chef-sign img {
-        width: 80%;
-    }
 }

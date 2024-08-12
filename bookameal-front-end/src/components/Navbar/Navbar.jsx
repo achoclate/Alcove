@@ -20,7 +20,7 @@ const Navigationbar = () => {
             <NavDropdown title="Our Brands" id="basic-nav-dropdown" className="navbar-dropdown">
               <NavDropdown.Item as={Link} to="#Ocean's Bounty">Ocean's Bounty</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="#Dough & Stone">Dough & Stone</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#Steak & Smokehouse">Steak & Smokehouse</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Smoke">Steak & Smokehouse</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <div className="navbar-user-icon">
