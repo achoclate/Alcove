@@ -2,7 +2,8 @@ body {
   background-color: black; /* Set the background color of the entire page */
   color: white; /* Set the default text color to white */
   margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Set a default font-family for consistency */
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .main {
@@ -14,6 +15,8 @@ body {
 
 .heading {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .heading h1 {
@@ -21,12 +24,16 @@ body {
   font-size: 2.5rem; /* Adjust font size as needed */
   font-weight: bold; /* Make text bold */
   margin-top: 40px; /* Add spacing around the heading */
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .heading h4 {
   color: white; /* Set subheading text color to white */
   font-size: 1.2rem; /* Adjust font size as needed */
   margin: 10px 0; /* Add spacing around the subheading */
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .filters {

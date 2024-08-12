@@ -8,6 +8,8 @@
     background-color: black !important;
     color: white; /* Ensure text is white for visibility */
     padding: 1rem 0; /* Reduced padding */
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .footer-links {
@@ -48,7 +50,6 @@
 }
 
 .footer h1 {
-    font-family: var(--font-base);
     color: var(--color-white);
     font-weight: 400;
     letter-spacing: 0.04em;

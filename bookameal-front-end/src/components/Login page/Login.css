@@ -3,6 +3,8 @@ body, html {
   padding: 0;
   height: 100%;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .wrapper {
@@ -17,6 +19,8 @@ body, html {
   justify-content: center;
   align-items: center;
   padding: 30px 40px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .wrapper h1 {

@@ -4,6 +4,8 @@
     flex-wrap: wrap;
     gap: 16px; /* Gap between cards */
     margin: 0 20px; /* Margin for the container */
+    font-family: 'Montserrat', sans-serif;
+
   }
   
   /* Each card should take up one-third of the container width, minus the gap */
