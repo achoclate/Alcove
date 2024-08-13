@@ -1,6 +1,6 @@
 import React from 'react';
 import SubHeading from '../../../components/SubHeading/SubHeading';
-import chefImage from '/home/achoclate/BookaMeal/bookameal-front-end/src/assets/chef.jpeg';
+import chefImage from '../../../../src/assets/chef.jpeg';
 import './Chef.css';
 
 const Chef = () => (

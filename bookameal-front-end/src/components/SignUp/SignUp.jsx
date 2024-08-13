@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SignUp.css" 
+import "./SignUp.css";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 import loginBackground from "../../assets/login.jpeg";
 import { useNavigate } from "react-router-dom";
@@ -10,69 +10,93 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(""); // State for error messages
   const history = useNavigate();
 
-  // Error handling function
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
     setShowConfirmPassword(true);
   };
 
-  // Validation function for username
   const validateUsername = (input) => {
     const regex = /^[a-zA-Z0-9_]{3,16}$/;
     return regex.test(input);
   };
 
-  // Validation function for email
   const validateEmail = (input) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(input);
   };
 
-  // Validation function for password
   const validatePassword = (input) => {
     const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     return regex.test(input);
   };
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    history("/");
-    // Perform input validation
+    setErrorMessage(""); // Clear any previous error messages
+
     if (!validateUsername(username)) {
-      console.log("Invalid username");
+      setErrorMessage("Invalid username. It should be 3-16 characters long and can include letters, numbers, and underscores.");
       return;
     }
 
     if (!validateEmail(email)) {
-      console.log("Invalid email");
+      setErrorMessage("Invalid email format.");
       return;
     }
 
     if (!validatePassword(password)) {
-      console.log("Invalid password");
+      setErrorMessage("Invalid password. It should be at least 8 characters long and include at least one number, one uppercase letter, and one lowercase letter.");
       return;
     }
 
     if (password !== confirmPassword) {
-      console.log("Passwords don't match");
+      setErrorMessage("Passwords don't match.");
       return;
     }
+
+    try {
+      const response = await fetch("http://localhost:5000/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, password }),
+      });
+
+      if (response.ok) {
+        alert("User created successfully"); // Display success message
+        history("/login"); // Redirect to login page
+      } else {
+        const data = await response.json();
+        setErrorMessage(data.message || "An error occurred during signup.");
+        console.log(data.message);
+      }
+    } catch (error) {
+      setErrorMessage("Error during signup: " + error.message);
+      console.error("Error during signup:", error);
+    }
   };
+
   const handleLogin = () => {
     history("/login");
   };
+
   return (
-    <div className="wrapper"
-    style={{
-      backgroundImage: `url(${loginBackground})`, // Use the imported image
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }}>
+    <div
+      className="wrapper"
+      style={{
+        backgroundImage: `url(${loginBackground})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <form onSubmit={handleSignup}>
         <h1>Signup</h1>
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
         <div className="input-box">
           <input
             type="text"
