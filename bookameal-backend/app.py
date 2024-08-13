@@ -54,8 +54,8 @@ def signup():
     if not username or not email or not password:
         return jsonify({'message': 'Missing fields'}), 400
 
-    hashed_password = generate_password_hash(password, method='sha256')
-    new_user = User(username=username, email=email, password=hashed_password)
+    hashed_password = generate_password_hash(password)  # Use default method
+    new_user = User(username=username, email=email, password=password)
     try:
         db.session.add(new_user)
         db.session.commit()
