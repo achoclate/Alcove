@@ -27,9 +27,7 @@ const About = () => {
 >
   → ORDER NOW
 </a>
-
-                    {/* <a href="#awards" className="about-button">→ OUR AWARDS</a> */}
-                    {/* <a href="#menu" className="about-button">→ VIEW MENU</a> */}
+   
                 </div>
             </div>
         </div>
