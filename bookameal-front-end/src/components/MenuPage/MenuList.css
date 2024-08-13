@@ -1,0 +1,82 @@
+.main {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Enable scrolling for the main container */
+}
+.heading {
+  text-align: center;
+  
+}
+/* Heading text color */
+.heading h1 {
+  color: black; /* Set color to black */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make text bold */
+  margin: 20px 0; /* Add spacing around the heading */
+}
+
+.heading h4 {
+  color: black; /* Set color to black for the subheading */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  margin: 10px 0; /* Add spacing around the subheading */
+}
+.filters {
+  margin: 20px 0;
+  text-align: center;
+}
+.filters button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.filters button:hover {
+  background-color: #0056b3;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.notFound,
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.notFound {
+  color: red;
+}
+.loading {
+  color: blue;
+}
+.meal-section {
+  margin-top: 44px;
+}
+.meal-section h1 {
+  text-align: center;
+}
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.notification-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  z-index: 1000;
+}
