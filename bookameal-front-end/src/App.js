@@ -1,8 +1,7 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigationbar from './components/Navbar/Navbar';
+import Navigationbar from './components/Navbar/Navbar'; // Global Navbar
 import Hero from './Pages/LandingPage/Hero/Hero';
 import Chef from './Pages/LandingPage/Chef/Chef';
 import Reservation from './Pages/Reservation/Reservation';
@@ -11,32 +10,67 @@ import Login from './components/LoginPage/Login';
 import SignUp from './components/SignUp/SignUp';
 import ContactUs from './components/ContactUs/ContactUs';
 import MenuList from './components/MenuPage/MenuList';
-import SmokeApp from './components/Smoke/App';
-import './App.css';
 import Footer from './components/Footer/Footer';
+import SmokeRoutes from './components/Smoke/SmokeRoutes'; // Import Smoke routes
 
 const App = () => (
   <Router>
-    <Navigationbar /> {/* Add Navigationbar here to appear on every page */}
     <Routes>
+      {/* Global Routes */}
       <Route path="/" element={
         <>
+          <Navigationbar />
           <Hero />
           <Chef />
+          <Footer />
         </>
       } />
-      <Route path="/about" element={<AboutUs />} /> 
-      <Route path="/reservation" element={<Reservation />} /> 
-      <Route path="/login" element={<Login />} /> 
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/menu" element={<MenuList />} /> 
-      <Route path="/smoke/*" element={<SmokeApp />} />
-    
+      <Route path="/about" element={
+        <>
+          <Navigationbar />
+          <AboutUs />
+          <Footer />
+        </>
+      } />
+      <Route path="/reservation" element={
+        <>
+          <Navigationbar />
+          <Reservation />
+          <Footer />
+        </>
+      } />
+      <Route path="/login" element={
+        <>
+          <Navigationbar />
+          <Login />
+          <Footer />
+        </>
+      } />
+      <Route path="/signup" element={
+        <>
+          <Navigationbar />
+          <SignUp />
+          <Footer />
+        </>
+      } />
+      <Route path="/contact" element={
+        <>
+          <Navigationbar />
+          <ContactUs />
+          <Footer />
+        </>
+      } />
+      <Route path="/menu" element={
+        <>
+          <Navigationbar />
+          <MenuList />
+          <Footer />
+        </>
+      } />
 
-      
+      {/* Smoke Routes - No Footer */}
+      <Route path="/smoke/*" element={<SmokeRoutes />} />
     </Routes>
-    <Footer/>
   </Router>
 );
 

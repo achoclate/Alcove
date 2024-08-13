@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { AboutUs, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container';
-import { Navbar } from './components';
-import './App.css';
+import { SmokeNavbar } from './components';
+import './SmokeApp.css';
 
 const App = () => (
   <div>
-    <Navbar />
+    <SmokeNavbar />
     <Header />
     <div id="about">
       <AboutUs />
