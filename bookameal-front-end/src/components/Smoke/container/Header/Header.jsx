@@ -8,7 +8,16 @@ const Header = () => (
   <div className="app__header app__wrapper section__padding" id="home">
     <div className="app__wrapper_info">
       <SubHeading title="Chase the new flavour" />
-      <h1 className="app__header-h1">The Essence of Exquisite Dining</h1>
+      <h1
+  className="header-h1"
+  style={{
+    fontFamily: 'Cormorant Upright, serif',
+    color : 'white'
+  }}
+>
+  The Essence of Exquisite Dining
+</h1>
+
       <p className="p__opensans" style={{ margin: '2rem 0' }}>
         Exploring the realm of fine dining unveils a symphony of flavors, a meticulous presentation, and an ambiance that elevates the entire experience. The essence of fine dining is not just in the food but in the artistry and attention to detail that transform a meal into a memorable event.
       </p>

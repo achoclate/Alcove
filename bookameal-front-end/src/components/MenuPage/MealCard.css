@@ -33,18 +33,19 @@
   
   .info {
     padding: 15px;
-    background: #050127;
+    background: #080808;
     text-align: center;
   }
   
   .info h2 {
     font-size: 1.2rem;
     margin: 10px 0;
+    color: white;
   }
   
   .info p {
     font-size: 1rem;
-    color: #777;
+    color: white;
   }
   
   /* Popup styling */
