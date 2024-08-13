@@ -11,7 +11,7 @@ import menu from '../assets/menu.jpeg';
 import overlaybg from '../assets/overlaybg.jpeg';
 import sppon from '../assets/sppon.jpeg';
 import welcome from '../assets/welcome.jpeg';
-import laurels from '../assets/laurels.jpeg';
+// import laurels from '../assets/laurels.jpeg';
 import award01 from '../assets/award01.jpeg';
 import award02 from '../assets/award02.jpeg';
 import award03 from '../assets/award03.jpeg';
@@ -34,7 +34,7 @@ export default {
   overlaybg,
   sppon,
   welcome,
-  laurels,
+  // laurels,
   award01,
   award02,
   award03,
