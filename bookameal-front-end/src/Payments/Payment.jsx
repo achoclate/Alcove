@@ -81,7 +81,7 @@ function Checkout() {
               <input
                 id="cvv"
                 name="cvv"
-                placeholder="415"
+                placeholder="123"
                 type="text"
                 required
               />
