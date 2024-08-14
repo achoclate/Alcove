@@ -7,7 +7,7 @@
   justify-items: center;
   padding: 10px;
   margin: 0 800px 0 0;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   color: #333;
   font-family: 'Arial', sans-serif;
   width: 500%; /* Ensures the table takes the full width */
