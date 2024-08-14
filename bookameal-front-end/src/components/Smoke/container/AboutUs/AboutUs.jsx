@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
-import image from '/home/achoclate/BookaMeal/bookameal-front-end/src/components/Smoke/assets/Restau.jpeg'
+import image from '../../../Smoke/assets/Restau.jpeg'
 
 const About = () => {
     return (
