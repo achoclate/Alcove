@@ -35,9 +35,10 @@ const NavigationBar = () => {
               id="basic-nav-dropdown"
               className="navbar-dropdown"
             >
-              <NavDropdown.Item as={Link} to="#Ocean's Bounty">
-                Ocean's Bounty
+              <NavDropdown.Item as={Link} to="/Brunch">
+                Brunch Palace
               </NavDropdown.Item>
+
               <NavDropdown.Item as={Link} to="#Dough & Stone">
                 Dough & Stone
               </NavDropdown.Item>

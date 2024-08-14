@@ -1,0 +1,219 @@
+/* Import Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Apply the Poppins font globally */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Menu Container */
+.menu-container {
+  padding: 60px 20px;
+  background-color: #6c757d;
+}
+
+/* Menu Header */
+.menu-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-subtitle {
+  font-size: 1.2em;
+  color: #030303;
+}
+
+.menu-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #080808;
+}
+
+.menu-description {
+  font-size: 1.1em;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Menu Category */
+.menu-category {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1e1f46, #f7d306);
+  padding: 15px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.category-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.dropdown-arrow {
+  font-size: 1.5em;
+}
+
+.dropdown-content {
+  padding: 20px;
+  background-color: rgb(33, 33, 51);
+}
+
+/* Menu Cards */
+.menu-card {
+  display: flex;
+  align-items: center;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-left {
+  flex-direction: row;
+}
+
+.card-right {
+  flex-direction: row-reverse;
+}
+
+.menu-card-content {
+  display: flex;
+  align-items: center;
+}
+
+.menu-card-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.menu-card-details {
+  flex: 1;
+}
+
+.menu-card-details label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu-card-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.order-button {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: #005bb5;
+}
+
+/* Orders Section */
+.orders-section {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orders-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Cards */
+.order-card {
+  display: flex;
+  align-items: center;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-left {
+  flex-direction: row;
+}
+
+.card-right {
+  flex-direction: row-reverse;
+}
+
+.order-card-content {
+  display: flex;
+  align-items: center;
+}
+
+.order-card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.order-card-details {
+  flex: 1;
+}
+
+.order-card-details label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.complete-order-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.complete-order-button:hover {
+  background-color: #218838;
+}
