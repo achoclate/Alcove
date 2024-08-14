@@ -1,128 +1,98 @@
-/* .orders-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+html {
+  scroll-behavior: smooth;
 }
 
-.orders-container h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.orders-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-} */
+/* General Styles */
 body {
-  background: #f3f4f6;
+  background: #000000;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
   margin: 0;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
-.card {
+/* Card Container */
+/* .order-card {
   margin: auto;
   max-width: 950px;
   width: 100%;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
   border: transparent;
-  background-color: #ffffff;
+} */
+.content {
+  scroll-behavior: smooth;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  box-sizing: border-box;
+  /* background-color: #040013e5; */
+  background-image: url("../../assets/heroImage.jpeg");
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-@media (max-width: 767px) {
-  .card {
-    margin: 3vh auto;
-  }
-}
-
-.cart {
-  background-color: #fff;
-  padding: 4vh 5vh;
+/* Cart Section Styles */
+.order-cart {
+  background-color: #6b6b6bf6;
+  /* padding: 4vh 5vh; */
+  padding: 7vh;
+  margin: 0;
+  width: 50%;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
 }
 
-@media (max-width: 767px) {
-  .cart {
-    padding: 4vh;
-    border-bottom-left-radius: unset;
-    border-top-right-radius: 1rem;
-  }
-}
-
-.summary {
-  background-color: #f0f0f0;
+/* Summary Section Styles */
+.order-summary {
+  background-color: #ddd;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 4vh;
+  width: 50%;
   color: rgb(65, 65, 65);
 }
 
-@media (max-width: 767px) {
-  .summary {
-    border-top-right-radius: unset;
-    border-bottom-left-radius: 1rem;
-  }
-}
-
-.summary .col-2 {
-  padding: 0;
-}
-
-.summary .col-10 {
-  padding: 0;
-}
-
-.row {
-  margin: 0;
-}
-
-.title b {
-  font-size: 1.5rem;
-}
-
-.main {
+/* Main Row Styles */
+.order-main {
   margin: 0;
   padding: 2vh 0;
   width: 100%;
 }
 
-.col-2,
-.col {
+.order-row {
+  margin: 0;
+}
+
+.order-col-2,
+.order-col {
   padding: 0 1vh;
 }
 
-button {
-  padding: 0 1vh;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.order-title b {
+  font-size: 1.5rem;
 }
 
-button:focus {
-  outline: none;
-}
-
-.close {
+.order-close {
   margin-left: auto;
   font-size: 0.7rem;
   cursor: pointer;
+  color: black;
 }
 
-img {
-  width: 3.5rem;
-}
-
-.back-to-shop {
+.order-back-to-shop {
   margin-top: 4.5rem;
+}
+
+.order-back-to-shop a {
+  padding: 0 1vh;
 }
 
 h5 {
@@ -137,18 +107,10 @@ form {
   padding: 2vh 0;
 }
 
-select {
-  border: 1px solid rgba(0, 0, 0, 0.137);
-  padding: 1.5vh 1vh;
-  margin-bottom: 4vh;
-  outline: none;
-  width: 100%;
-  background-color: rgb(247, 247, 247);
-}
-
+select,
 input {
   border: 1px solid rgba(0, 0, 0, 0.137);
-  padding: 1vh;
+  padding: 1.5vh 1vh;
   margin-bottom: 4vh;
   outline: none;
   width: 100%;
@@ -159,24 +121,26 @@ input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.btn {
-  background-color: #007bff;
-  border-color: #007bff;
+.order-btn {
+  background-color: #000;
+  border-color: #000;
   color: white;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin-top: 4vh;
   padding: 1vh;
   border-radius: 0;
+  cursor: pointer;
+  border-radius: ;
 }
 
-.btn:focus {
+.order-btn:focus {
   box-shadow: none;
   outline: none;
   color: white;
 }
 
-.btn:hover {
+.order-btn:hover {
   color: white;
 }
 
@@ -187,4 +151,33 @@ a {
 a:hover {
   color: black;
   text-decoration: none;
+}
+
+#order-code {
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.253),
+      rgba(255, 255, 255, 0.185)
+    ),
+    url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
+}
+
+@media (max-width: 767px) {
+  .order-card {
+    margin: 3vh auto;
+  }
+
+  .order-cart {
+    padding: 4vh;
+    border-bottom-left-radius: unset;
+    border-top-right-radius: 1rem;
+  }
+
+  .order-summary {
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
+  }
 }

@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import { CartContext } from "./Order";
+import { OrderContext } from "./Order";
+import "./Orders.css";
 
 const Orders = () => {
-  const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext);
+  const { cartItems, updateQuantity, removeFromCart } =
+    useContext(OrderContext);
 
   const calculateTotal = () => {
     return cartItems
@@ -16,75 +18,102 @@ const Orders = () => {
   };
 
   return (
-    <div className="card">
-      <div className="row">
-        <div className="col-md-8 cart">
-          <div className="title">
-            <div className="row">
-              <div className="col">
-                <h4>
-                  <b>Your Order</b>
-                </h4>
-              </div>
-              <div className="col align-self-center text-right text-muted">
-                {cartItems.length} items
-              </div>
-            </div>
-          </div>
-          {cartItems.map((item) => (
-            <div key={item.id} className="row border-top border-bottom">
-              <div className="row main align-items-center">
-                <div className="col-2">
-                  <img className="img-fluid" src={item.img} alt={item.name} />
+    <div className="order-card">
+      <div className="order-row">
+        <div className="content">
+          <div className="order-col-md-8 order-cart">
+            <div className="order-title">
+              <div className="order-row">
+                <div className="order-col">
+                  <h4>
+                    <b>Your Orders</b>
+                  </h4>
                 </div>
-                <div className="col">
-                  <div className="row text-muted">{item.name}</div>
-                </div>
-                <div className="col">
-                  <button onClick={() => updateQuantity(item.id, -1)}>-</button>
-                  <span className="border">{item.quantity}</span>
-                  <button onClick={() => updateQuantity(item.id, 1)}>+</button>
-                </div>
-                <div className="col">
-                  &euro; {item.price.toFixed(2)}
-                  <span
-                    className="close"
-                    onClick={() => removeFromCart(item.id)}
-                  >
-                    &#10005;
-                  </span>
+                <div className="order-col align-self-center text-right text-muted">
+                  {cartItems.length} items
                 </div>
               </div>
             </div>
-          ))}
-          <div className="back-to-shop">
-            <a href="#">&leftarrow;</a>
-            <span className="text-muted">Back to menu</span>
-          </div>
-        </div>
-        <div className="col-md-4 summary">
-          <div>
-            <h5>
-              <b>Summary</b>
-            </h5>
-          </div>
-          <hr />
-          <div className="row">
-            <div className="col" style={{ paddingLeft: 0 }}>
-              ITEMS {cartItems.length}
+            {cartItems.map((item) => (
+              <div key={item.id} className="order-row border-top border-bottom">
+                <div className="order-row order-main align-items-center">
+                  <div className="order-col-2">
+                    <img className="img-fluid" src={item.img} alt={item.name} />
+                  </div>
+                  <div className="order-col">
+                    <div className="order-row text-muted">{item.name}</div>
+                    <div className="order-row">{item.description}</div>
+                  </div>
+                  <div className="order-col">
+                    <a href="#" onClick={() => updateQuantity(item.id, -1)}>
+                      -
+                    </a>
+                    <a href="#" className="border">
+                      {item.quantity}
+                    </a>
+                    <a href="#" onClick={() => updateQuantity(item.id, 1)}>
+                      +
+                    </a>
+                  </div>
+                  <div className="order-col">
+                    &euro; {item.price.toFixed(2)}
+                    <span
+                      className="order-close"
+                      onClick={() => removeFromCart(item.id)}
+                    >
+                      &#10005;
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <div className="order-back-to-shop">
+              <a href="#">Back to menu</a>
+              {/* <span className="text-muted">Back to shop</span> */}
             </div>
-            <div className="col text-right">&euro; {calculateTotal()}</div>
           </div>
-          <div
-            className="row"
-            style={{ borderTop: "1px solid rgba(0,0,0,.1)", padding: "2vh 0" }}
-          >
-            <div className="col">TOTAL PRICE</div>
-            <div className="col text-right">&euro; {calculateTotal()}</div>
+          <div className="order-col-md-4 order-summary">
+            <div>
+              <h5>
+                <b>Summary</b>
+              </h5>
+            </div>
+            <hr />
+            <div className="order-row">
+              <div className="order-col" style={{ paddingLeft: 0 }}>
+                ITEMS {cartItems.length}
+              </div>
+              <div className="order-col text-right">
+                &euro; {calculateTotal()}
+              </div>
+            </div>
+            <form>
+              <p>SHIPPING</p>
+              <select>
+                <option className="text-muted">
+                  Standard-Delivery - &euro;5.00
+                </option>
+              </select>
+              <p>GIVE CODE</p>
+              <input id="order-code" placeholder="Enter your code" />
+            </form>
+            <div
+              className="order-row"
+              style={{
+                borderTop: "1px solid rgba(0,0,0,.1)",
+                padding: "2vh 0",
+              }}
+            >
+              <div className="order-col">TOTAL PRICE</div>
+              <div className="order-col text-right">
+                &euro; {parseFloat(calculateTotal()) + 5.0}
+              </div>
+            </div>
+            <button className="order-btn" onClick={handleCheckout}>
+              CHECKOUT
+            </button>
           </div>
-          <button className="btn" onClick={handleCheckout}>
-            CHECKOUT
-          </button>
         </div>
       </div>
     </div>
