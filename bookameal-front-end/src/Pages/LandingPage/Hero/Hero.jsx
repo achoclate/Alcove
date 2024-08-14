@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="hero-links">
               <Link to="/reservation" className="hero-link">Reserve a Table</Link>
               <span className="divider">|</span>
-              <a href="#menu" className="hero-link">View the Menu</a>
+              <Link to="/meal-of-the-day" className="hero-link">Menu Of The Day</Link> {/* Updated */}
             </div>
           </Col>
         </Row>

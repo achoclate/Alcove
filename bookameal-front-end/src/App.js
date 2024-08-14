@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigationbar from './components/Navbar/Navbar'; // Global Navbar
 import Hero from './Pages/LandingPage/Hero/Hero';
+import MealOfTheDay from './Pages/MealOfTheDay/MealOfTheDay';
 import Chef from './Pages/LandingPage/Chef/Chef';
 import Reservation from './Pages/Reservation/Reservation';
 import AboutUs from './Pages/About/About';
@@ -11,9 +12,12 @@ import SignUp from './components/SignUp/SignUp';
 import ContactUs from './components/ContactUs/ContactUs';
 import MenuList from './components/MenuPage/MenuList';
 import Footer from './components/Footer/Footer';
+import Orders from './components/Orders/Orders';
+import { OrderProvider } from  '../src/components/Orders/Order'
 import SmokeRoutes from './components/Smoke/SmokeRoutes'; // Import Smoke routes
 
 const App = () => (
+  <OrderProvider>
   <Router>
     <Routes>
       {/* Global Routes */}
@@ -36,6 +40,13 @@ const App = () => (
         <>
           <Navigationbar />
           <Reservation />
+          <Footer />
+        </>
+      } />
+      <Route path="/meal-of-the-day" element={
+        <>
+          <Navigationbar />
+          <MealOfTheDay />
           <Footer />
         </>
       } />
@@ -67,11 +78,19 @@ const App = () => (
           <Footer />
         </>
       } />
+      <Route path="/orders" element={
+        <>
+          <Navigationbar />
+          <Orders />
+          <Footer />
+        </>
+      }/>
 
       {/* Smoke Routes - No Footer */}
       <Route path="/smoke/*" element={<SmokeRoutes />} />
     </Routes>
   </Router>
+  </OrderProvider>
 );
 
 export default App;

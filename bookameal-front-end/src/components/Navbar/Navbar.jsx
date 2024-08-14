@@ -16,6 +16,8 @@ const Navigationbar = () => {
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/orders">Orders</Nav.Link>
+
             
             <NavDropdown title="Our Brands" id="basic-nav-dropdown" className="navbar-dropdown">
               <NavDropdown.Item as={Link} to="#Ocean's Bounty">Ocean's Bounty</NavDropdown.Item>

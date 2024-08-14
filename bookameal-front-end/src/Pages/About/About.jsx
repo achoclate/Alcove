@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutImage from '/home/achoclate/BookaMeal/bookameal-front-end/src/assets/about.jpeg';
+import aboutImage from '../../assets/about.jpeg';
 
 const About = () => (
   <div className="about-container" id="about">

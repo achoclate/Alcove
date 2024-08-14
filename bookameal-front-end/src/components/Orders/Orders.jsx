@@ -29,9 +29,14 @@ const Orders = () => {
                     <b>Your Orders</b>
                   </h4>
                 </div>
-                <div className="order-col align-self-center text-right text-muted">
+                <div>
+                <div className="order-col1">
                   {cartItems.length} items
                 </div>
+                </div>
+                {/* <div className="order-col align-self-center text-right text-muted">
+                  {cartItems.length} items
+                </div> */}
               </div>
             </div>
             {cartItems.map((item) => (

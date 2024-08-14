@@ -29,19 +29,20 @@ body {
   flex-direction: row;
   overflow-y: auto;
   box-sizing: border-box;
-  background-image: url("../assets/heroImage.jpeg");
+  background-image: url("../../assets/heroImage.jpeg");
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Cart Section Styles */
 .order-cart {
-  background-color: #6b6b6bf6;
+  background-color: black;
   padding: 7vh;
   margin: 0;
   width: 50%;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
+  color: aliceblue;
 }
 
 /* Summary Section Styles */
@@ -69,9 +70,15 @@ body {
 .order-col {
   padding: 0 1vh;
 }
+.order-col1 {
+  padding: 0 1vh;
+  color:white;
+}
+
 
 .order-title b {
   font-size: 1.5rem;
+  color:white;
 }
 
 .order-close {
