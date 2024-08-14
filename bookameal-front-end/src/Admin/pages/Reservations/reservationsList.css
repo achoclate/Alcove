@@ -1,0 +1,47 @@
+/* src/pages/reservationsList.css */
+
+/* Container for the ReservationsList component */
+.reservationsListContainer {
+    display: flex;
+    justify-content: center; /* Center the DataGrid horizontally */
+    padding: 20px; /* Add padding around the container */
+    background-color: #ffffff; /* Set background color to white */
+    color: #333; /* Set text color to dark gray */
+    font-family: 'Arial', sans-serif; /* Use Arial font */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  /* Styling for the DataGrid */
+  .reservationsList {
+    width: 100%; /* Ensure the DataGrid takes the full width of its container */
+    max-width: 100%; /* Prevent the DataGrid from exceeding container width */
+    overflow: hidden; /* Prevent scrolling overflow */
+  }
+  
+  /* Adjustments for the DataGrid */
+  .MuiDataGrid-root {
+    border: none; /* Remove the default border */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Ensure text is visible */
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    background-color: #f5f5f5; /* Light gray background for headers */
+    color: #333; /* Dark gray text color for headers */
+    font-weight: bold; /* Bold text for headers */
+  }
+  
+  .MuiDataGrid-cell {
+    color: #333; /* Text color inside cells */
+  }
+  
+  .MuiDataGrid-footerContainer {
+    background-color: #f5f5f5; /* Light gray background for the footer */
+    color: #333; /* Dark gray text color for footer */
+  }
+  
+  .MuiDataGrid-columnSeparator {
+    display: none; /* Hide column separators */
+  }
+  

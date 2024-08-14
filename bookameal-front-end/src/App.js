@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,6 +14,7 @@ import MenuList from './components/MenuPage/MenuList';
 import SmokeApp from './components/Smoke/App';
 import Footer from './components/Footer/Footer';
 import UserProfile from './Pages/UserProfile/UserProfile'; // Import UserProfile
+import AdminRoutes from './Admin/AdminRoutes'; // Import AdminRoutes
 import './App.css';
 
 const App = () => {
@@ -28,19 +30,38 @@ const App = () => {
 
   return (
     <Router>
-      <Navigationbar user={user} onLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<><Hero /><Chef /></>} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/reservation" element={<Reservation />} />
-        <Route path="/login" element={<Login onLogin={handleLogin} />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/menu" element={<MenuList />} />
-        <Route path="/smoke/*" element={<SmokeApp />} />
-        <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} /> {/* Profile route */}
+        {/* Public Routes */}
+        <Route
+          path="/*"
+          element={
+            <>
+              <Navigationbar user={user} onLogout={handleLogout} />
+              <main>
+                <Routes>
+                  <Route path="/" element={<><Hero /><Chef /></>} />
+                  <Route path="/about" element={<AboutUs />} />
+                  <Route path="/reservation" element={<Reservation />} />
+                  <Route path="/login" element={<Login onLogin={handleLogin} />} />
+                  <Route path="/signup" element={<SignUp />} />
+                  <Route path="/contact" element={<ContactUs />} />
+                  <Route path="/menu" element={<MenuList />} />
+                  <Route path="/smoke/*" element={<SmokeApp />} />
+                  <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} />
+                  <Route path="*" element={<div>404 Not Found</div>} />
+                </Routes>
+              </main>
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Admin Routes */}
+        <Route
+          path="/admin/*"
+          element={<AdminRoutes />} // AdminRoutes will handle its own layout
+        />
       </Routes>
-      <Footer/>
     </Router>
   );
 };

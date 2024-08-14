@@ -1,31 +1,85 @@
+/* src/pages/userList/userList.css */
+
+/* Container for the UserList component */
 .userList {
-    flex: 4;
-  }
-  
-  .userListUser {
-    display: flex;
-    align-items: center;
-  }
-  
-  .userListImg {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-  }
-  
-  .userListEdit{
-      border: none;
-      border-radius: 10px;
-      padding: 5px 10px;
-      background-color: #3bb077;
-      color: white;
-      cursor: pointer;
-      margin-right: 20px;
-  }
-  
-  .userListDelete{
-      color: red;
-      cursor: pointer;
-  }
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 10px;
+  margin: 0 800px 0 0;
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  width: 500%; /* Ensures the table takes the full width */
+}
+
+/* Styling for individual user rows */
+.userListUser {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #333; /* Ensure the username text is visible */
+}
+
+/* Styling for user images */
+.userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid #ddd; /* Optional: Add a border for better image distinction */
+}
+
+/* Styling for Edit button */
+.userListEdit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.userListEdit:hover {
+  background-color: #36a667; /* Darken on hover */
+}
+
+/* Styling for Delete button */
+.userListDelete {
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.userListDelete:hover {
+  color: darkred; /* Darken on hover */
+}
+
+/* Adjustments for the DataGrid */
+.MuiDataGrid-root {
+  border: none;
+  font-size: 16px;
+  color: #333; /* Ensure text is visible */
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
+
+.MuiDataGrid-cell {
+  color: #333; /* Text color inside cells */
+}
+
+.MuiDataGrid-footerContainer {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.MuiDataGrid-columnSeparator {
+  display: none; /* Hide column separators */
+}

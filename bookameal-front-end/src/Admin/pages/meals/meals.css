@@ -1,58 +1,57 @@
-/* src/pages/meals/meals.css */
 .meals {
-    flex: 4;
-    padding: 20px;
-  }
-  
-  .mealsTitle {
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  .mealsTableContainer {
-    margin-top: 20px;
-    overflow-x: auto;
-  }
-  
-  .mealsTable {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .mealsTable th,
-  .mealsTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .mealsTable th {
-    background-color: #f4f4f4;
-    text-align: left;
-  }
-  
-  .editMealForm {
-    margin-top: 20px;
-  }
-  
-  .editMealForm form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .editMealForm input,
-  .editMealForm textarea {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .editMealForm button {
-    padding: 8px 16px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+  flex: 4;
+  padding: 20px;
+}
+
+.mealsTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.mealsTableContainer {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.mealsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mealsTable th,
+.mealsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.mealsTable th {
+  background-color: #f4f4f4;
+}
+
+.editMealForm {
+  margin-top: 20px;
+}
+
+.editMealForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editMealForm input,
+.editMealForm textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.editMealForm button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

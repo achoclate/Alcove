@@ -1,17 +1,17 @@
-/* src/components/topbar/topbar.css */
-
+/* Top Bar Styling */
 .topbar {
   width: 100%;
-  height: 50px;
+  height: 60px; /* Increased height for better visibility */
   background-color: white;
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid #e0e0e0; /* Light border for separation */
 }
 
 .topbarWrapper {
   height: 100%;
-  padding: 0px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +32,7 @@
 .topbarIconContainer {
   position: relative;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 15px; /* Increased margin for spacing */
   color: #555;
 }
 
@@ -41,7 +41,7 @@
   height: 15px;
   position: absolute;
   top: -5px;
-  right: 0px;
+  right: -5px; /* Adjusted to fit within icon container */
   background-color: red;
   color: white;
   border-radius: 50%;
@@ -54,7 +54,9 @@
 .topAvatar {
   width: 40px;
   height: 40px;
+  border-radius: 50%; /* Ensure avatar is circular */
   cursor: pointer;
+  object-fit: cover; /* Ensure image is properly contained */
 }
 
 .topbarProfileContainer {
@@ -64,9 +66,9 @@
 .profileDropdown {
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 60px; /* Adjusted to be below the top bar */
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
   z-index: 999;
