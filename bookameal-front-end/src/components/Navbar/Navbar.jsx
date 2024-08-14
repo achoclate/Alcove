@@ -1,10 +1,14 @@
 import React from 'react';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaRegUserCircle } from 'react-icons/fa';
 import './Navbar.css'; // Import the CSS file
 
-const Navigationbar = () => {
+const Navigationbar = ({ user, onLogout }) => {
+  const handleLogout = () => {
+    if (onLogout) onLogout();
+  };
+
   return (
     <Navbar className="navbar" bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
@@ -24,9 +28,20 @@ const Navigationbar = () => {
             </NavDropdown>
           </Nav>
           <div className="navbar-user-icon">
-            <Link to="/login">
-              <FaRegUserCircle size="1.5em" />
-            </Link>
+            {user ? (
+              <NavDropdown
+                title={<>{user.username} <FaRegUserCircle size="1.5em" /></>}
+                id="user-dropdown"
+                className="navbar-user-dropdown"
+              >
+                <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <Link to="/login">
+                <FaRegUserCircle size="1.5em" />
+              </Link>
+            )}
           </div>
         </Navbar.Collapse>
       </Container>

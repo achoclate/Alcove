@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import loginBackground from "../../assets/login.jpeg"; // Import the background image
 import "./Login.css";
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(""); // State for error messages
@@ -25,9 +25,10 @@ const LoginPage = () => {
       });
 
       if (response.ok) {
-        // Assuming the response has a JSON body indicating successful login
+        // Assuming the response has a JSON body with user data
         const data = await response.json();
         alert("Login successful!");
+        onLogin(data); // Pass user data to parent component
         navigate("/"); // Redirect to home page
       } else {
         const data = await response.json();
