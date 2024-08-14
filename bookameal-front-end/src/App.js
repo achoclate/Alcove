@@ -58,7 +58,7 @@ import Login from "./components/Login/Login";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Orders from "./Pages/Orders/Orders";
 import { OrderProvider } from "../src/Pages/Orders/Order"; // Import OrderProvider
-
+import Notifications from "./components/Notifications/Notifications";
 const App = () => (
   <OrderProvider>
     {" "}
@@ -83,6 +83,7 @@ const App = () => (
         <Route path="/contact" element={<ContactUs />} />{" "}
         <Route path="/menu" element={<MenuList />} />{" "}
         <Route path="/orders" element={<Orders />} />{" "}
+        <Route path="/notifications" element={<Notifications />} />{" "}
       </Routes>
       <Footer />
     </Router>
