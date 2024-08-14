@@ -1,91 +1,121 @@
-// // src/App.js
-// import React from "react";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import NavigationBar from "./components/Navbar/Navbar";
-// import Hero from "./Pages/LandingPage/Hero/Hero";
-// import Chef from "./Pages/LandingPage/Chef/Chef";
-// import Reservation from "./Pages/Reservation/Reservation";
-// import AboutUs from "./Pages/About/About";
-// import "./App.css";
-// import Footer from "./components/Footer/Footer";
-// import SignUp from "./components/SignUp/SignUp";
-// import MenuList from "./components/MenuPage/MenuList";
-// import Login from "./components/Login/Login";
-// import ContactUs from "./components/ContactUs/ContactUs";
-// import Orders from "./Pages/Orders/Orders";
-
-// const App = () => (
-//   <Router>
-//     <NavigationBar /> {/* Add Navigationbar here to appear on every page */}
-//     <Routes>
-//       <Route
-//         path="/"
-//         element={
-//           <>
-//             <Hero />
-//             <Chef />
-//           </>
-//         }
-//       />
-//       <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
-//       <Route path="/reservation" element={<Reservation />} />{" "}
-//       <Route path="/login" element={<Login />} />{" "}
-//       <Route path="/signup" element={<SignUp />} />{" "}
-//       <Route path="/contact" element={<ContactUs />} />{" "}
-//       <Route path="/menu" element={<MenuList />} />{" "}
-//       <Route path="/orders" element={<Orders />} />{" "}
-//     </Routes>
-//     <Footer />
-//   </Router>
-// );
-
-// export default App;
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavigationBar from "./components/Navbar/Navbar";
+import Navigationbar from "./components/Navbar/Navbar"; // Global Navbar
 import Hero from "./Pages/LandingPage/Hero/Hero";
+import MealOfTheDay from "./Pages/MealOfTheDay/MealOfTheDay";
 import Chef from "./Pages/LandingPage/Chef/Chef";
 import Reservation from "./Pages/Reservation/Reservation";
 import AboutUs from "./Pages/About/About";
-import "./App.css";
-import Footer from "./components/Footer/Footer";
-import SignUp from "./components/SignUp/SignUp";
-import MenuList from "./components/MenuPage/MenuList";
 import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
 import ContactUs from "./components/ContactUs/ContactUs";
-import Orders from "./Pages/Orders/Orders";
-import { OrderProvider } from "../src/Pages/Orders/Order"; // Import OrderProvider
-import Notifications from "./components/Notifications/Notifications";
+import MenuList from "./components/MenuPage/MenuList";
+import Footer from "./components/Footer/Footer";
+import Orders from "./components/Orders/Orders";
+import { OrderProvider } from "../src/components/Orders/Order";
+import SmokeRoutes from "./components/Smoke/SmokeRoutes"; // Import Smoke routes
+
 const App = () => (
   <OrderProvider>
-    {" "}
-    {/* Wrap your application with OrderProvider */}
     <Router>
-      <NavigationBar /> {/* Add Navigationbar here to appear on every page */}
       <Routes>
+        {/* Global Routes */}
         <Route
           path="/"
           element={
             <>
+              <Navigationbar />
               <Hero />
               <Chef />
+              <Footer />
             </>
           }
         />
-        <Route path="/about" element={<AboutUs />} />{" "}
-        {/* About Us page route */}
-        <Route path="/reservation" element={<Reservation />} />{" "}
-        <Route path="/login" element={<Login />} />{" "}
-        <Route path="/signup" element={<SignUp />} />{" "}
-        <Route path="/contact" element={<ContactUs />} />{" "}
-        <Route path="/menu" element={<MenuList />} />{" "}
-        <Route path="/orders" element={<Orders />} />{" "}
-        <Route path="/notifications" element={<Notifications />} />{" "}
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navigationbar />
+              <AboutUs />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/reservation"
+          element={
+            <>
+              <Navigationbar />
+              <Reservation />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/meal-of-the-day"
+          element={
+            <>
+              <Navigationbar />
+              <MealOfTheDay />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <>
+              <Navigationbar />
+              <Login />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <>
+              <Navigationbar />
+              <SignUp />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Navigationbar />
+              <ContactUs />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/menu"
+          element={
+            <>
+              <Navigationbar />
+              <MenuList />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <>
+              <Navigationbar />
+              <Orders />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Smoke Routes - No Footer */}
+        <Route path="/smoke/*" element={<SmokeRoutes />} />
       </Routes>
-      <Footer />
     </Router>
   </OrderProvider>
 );

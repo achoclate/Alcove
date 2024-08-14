@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import aboutImage from "/home/gee/Documents/Phase_5/Alcove/bookameal-front-end/src/assets/about.jpeg";
+import aboutImage from "../../assets/about.jpeg";
 
 const About = () => (
   <div className="about-container" id="about">
@@ -18,21 +18,19 @@ const About = () => (
           creating a serene ambiance that enhances the overall dining
           experience. This inviting space, often tucked away, allows guests to
           feel special and relaxed as they savor their food and company in a
-          beautifully designed, peaceful restaurant.As we continue to evolve,
+          beautifully designed, peaceful restaurant. As we continue to evolve,
           The Alcove remains steadfast in its mission to provide a haven of
           comfort and exquisite taste. We invite you to join us and experience
           the unique charm of our restaurant—a place where every visit is more
           than just a meal; it’s an opportunity to escape, unwind, and savor the
           extraordinary.
         </p>
-        <button type="button" className="button">
-          Know More
-        </button>
       </div>
 
       <div className="about-content_knife">
         <img src={aboutImage} alt="About Knife" />
         {/* Knife image can be added here if needed */}
+        <img src={aboutImage} alt="About Knife" />
       </div>
 
       <div className="about-content_history">
@@ -51,9 +49,6 @@ const About = () => (
           beautifully designed, serene environment. Our dedication to excellence
           is evident in every detail.
         </p>
-        <button type="button" className="button">
-          Know More
-        </button>
       </div>
     </div>
   </div>

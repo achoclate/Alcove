@@ -1,0 +1,59 @@
+.newsletter-container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    text-align: center;
+    color: #f0e6c8;
+    border: 1px solid #f0e6c8;
+  }
+  
+  .newsletter-container h3 {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .newsletter-container h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    font-family: 'Cormorant Upright', serif;
+  }
+  
+  .newsletter-container p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #f0e6c8;
+    background-color: #333;
+    color: #f0e6c8;
+    width: 300px;
+  }
+  
+  .newsletter-form input::placeholder {
+    color: #8f8f8f;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #f0e6c8;
+    color: #1a1a1a;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #e6d7b3;
+  }
+  

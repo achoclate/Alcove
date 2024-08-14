@@ -54,17 +54,7 @@
   margin: 2rem 0;
 }
 
-.button {
-  background-color: #333; /* Replace with actual button color */
-  color: #fff; /* Button text color */
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
 
-.button:hover {
-  background-color: #555; /* Button hover color */
-}
 
 @media screen and (max-width: 900px) {
   .about-content {

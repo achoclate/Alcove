@@ -1,8 +1,6 @@
 import React from "react";
-
 import SubHeading from "../../../components/SubHeading/SubHeading";
-import chefImage from "/home/gee/Documents/Phase_5/Alcove/bookameal-front-end/src/assets/chef.jpeg";
-
+import chefImage from "../../../assets/chef.jpeg";
 import "./Chef.css";
 
 const Chef = () => (
@@ -13,12 +11,10 @@ const Chef = () => (
     <div className="app__wrapper_info">
       <SubHeading title="Chef's word" />
       <h1 className="headtext__cormorant" style={{ color: "white" }}>
-        Our unwavering commitment
+        Relentless Passion
       </h1>
-      ` `
       <div className="app__chef-content">
         <div className="app__chef-content_quote">
-          {/* <img src={images.quote} alt="quote_image" /> */}
           <p className="p__opensans">
             Welcome to Alcove, where culinary excellence meets innovative
             artistry..
@@ -36,7 +32,6 @@ const Chef = () => (
       <div className="app__chef-sign">
         <p>Sam G</p>
         <p className="p__opensans">Executive Chef</p>
-        {/* <img src={images.sign} alt="sign_image" /> */}
       </div>
     </div>
   </div>

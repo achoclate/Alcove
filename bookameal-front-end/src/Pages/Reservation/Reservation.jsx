@@ -1,52 +1,42 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
-import './Reservation.css'; // Custom CSS file for additional styling
+import './Reservation.css';
 
-const Reservation = () => {
+function Reservation() {
   return (
     <div className="reservation-container">
-      <div className="form-col">
-        <Form>
-          <h2 style={{ color: 'black' }}>Make a Reservation</h2>
-
-          <Form.Group controlId="formName">
-            <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter your name" required />
-          </Form.Group>
-          <Form.Group controlId="formEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter your email" required />
-          </Form.Group>
-          <Form.Group controlId="formPhone">
-            <Form.Label>Phone Number</Form.Label>
-            <Form.Control type="tel" placeholder="Enter your phone number" required />
-          </Form.Group>
-          <Form.Group controlId="formDate">
-            <Form.Label>Date</Form.Label>
-            <Form.Control type="date" required />
-          </Form.Group>
-          <Form.Group controlId="formTime">
-            <Form.Label>Time</Form.Label>
-            <Form.Control type="time" required />
-          </Form.Group>
-          <Form.Group controlId="formGuests">
-            <Form.Label>Number of Guests</Form.Label>
-            <Form.Control type="number" min="1" max="20" required />
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Reserve
-          </Button>
-        </Form>
+      <div className="dress-code-section">
+        <h2>Dress Code</h2>
+        <p>Smart Casual (Vest, Shorts, Flip Flops, Sandals, Sportswear & Caps are NOT permitted)</p>
+        <p>Right of admission reserved</p>
+        <p>Monday - Sunday: 12:00 PM - 10:00 PM</p>
+        <p>Sundowners: 4:30 PM - 6:30 PM</p>
       </div>
-      <div className="other-half">
-        <div className="other-content">
-          <h2>Welcome to Our Restaurant</h2>
-          <p>Enjoy a unique dining experience with us.</p>
-          {/* Add any other content you want here */}
-        </div>
+      <div className="reservation-form-section">
+        <h2>Reservation</h2>
+        <form>
+          <div className="form-group">
+            <label>
+              Make a reservation
+              <input type="number" placeholder="1 guest" required />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Date
+              <input type="date" placeholder="Aug 12, 2024" required />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Time
+              <input type="time" placeholder="2:00 PM" required />
+            </label>
+          </div>
+          <button type="submit">RESERVE</button>
+        </form>
       </div>
     </div>
   );
-};
+}
 
 export default Reservation;
