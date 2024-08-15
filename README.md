@@ -52,9 +52,8 @@ Alcove is an intuitive online meal booking application designed to allow custome
 ### Installation Steps
 
 1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/username/alcove-meal-booking.git
-   cd alcove-meal-booking
+   ```bashgit@github.com:achoclate/Alcove.git
+   cd Alcove
    ```
 
 2. **Frontend Setup:**
@@ -116,13 +115,11 @@ Alcove is an intuitive online meal booking application designed to allow custome
 - Contributions are welcome! Please fork this repository and submit a pull request with your changes.
 
 ## Authors
+- [Wilson Gitonga](https://github.com/wilsonwahome)
+- [Abdifatah Farah](https://github.com/Dadir)
+- [Ann Achoki](https://github.com/achoclate)
+- [Virginia Gichira](https://github.com/gichira22)
+- [Mustafa Adan](https://github.com/MUSTIADO)
 
-Wilson Gitonga
-Abdifatah Farah
-Ann Achoki
-Virginia Gichira
-Mustafa Adan
-
-## License
-
-- This project is licensed under the MIT License.
+## Copyright and License Information
+The project is licensed under [MIT License](LICENSE)
