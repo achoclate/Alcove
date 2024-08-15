@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="hero-links">
               <Link to="/reservation" className="hero-link">Reserve a Table</Link>
               <span className="divider">|</span>
-              <Link to="/meal-of-the-day" className="hero-link">View the Menu</Link>
+              <Link to="/meal-of-the-day" className="hero-link">Menu of the day</Link>
             </div>
           </Col>
         </Row>

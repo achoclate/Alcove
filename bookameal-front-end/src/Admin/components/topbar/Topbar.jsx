@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./topbar.css";
-import { NotificationsNone, Language, Settings, AccountCircle } from "@material-ui/icons";
+import { NotificationsNone, Settings, AccountCircle } from "@material-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Topbar({ setAuthenticated }) {
@@ -87,10 +87,6 @@ export default function Topbar({ setAuthenticated }) {
                 )}
               </div>
             )}
-          </div>
-          <div className="topbarIconContainer">
-            <Language />
-            <span className="topIconBadge">2</span>
           </div>
           <div className="topbarIconContainer">
             <Settings />

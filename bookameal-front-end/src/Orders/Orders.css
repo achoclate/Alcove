@@ -7,7 +7,7 @@ html {
 
 /* General Styles */
 body {
-  background: #000000;
+  /* background: #000000; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ body {
   flex-direction: row;
   overflow-y: auto;
   box-sizing: border-box;
-  background-image: url("../assets/heroImage.jpeg");
+  /* background-image: url("../assets/heroImage.jpeg"); */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

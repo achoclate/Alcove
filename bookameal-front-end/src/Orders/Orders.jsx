@@ -42,8 +42,8 @@ const Orders = () => {
   };
 
   return (
-    <div className="order-card">
-      <div className="order-row">
+    <div className="order-card" >
+      <div className="order-row" background-color="black">
         <div className="content">
           <div className="order-col-md-8 order-cart">
             <div className="order-title">

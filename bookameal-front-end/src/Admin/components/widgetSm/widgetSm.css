@@ -2,7 +2,7 @@
     flex: 1;
     padding: 20px;
     margin-right: 20px;
-    background-color: #ec8e8e; /* White background */
+    background-color: #f7f5f5; /* White background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }

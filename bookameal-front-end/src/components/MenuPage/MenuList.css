@@ -10,7 +10,7 @@ body {
   padding: 20px;
   height: 100vh;
   overflow-y: auto; /* Enable scrolling for the main container */
-  background-color: black; /* Ensure the background color for the main container matches the body */
+  /*background-color: rgb(6, 5, 5);  Ensure the background color for the main container matches the body */
 }
 
 .heading {

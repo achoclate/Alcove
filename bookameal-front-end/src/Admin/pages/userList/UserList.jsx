@@ -21,8 +21,14 @@ export default function UserList() {
     fetchUsers();
   }, []);
 
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+  const handleDelete = async (id) => {
+    try {
+      // Implement the delete functionality by sending a delete request to the backend
+      await axios.delete(`http://localhost:5000/users/${id}`);
+      setData(data.filter((item) => item.id !== id));
+    } catch (error) {
+      console.error("Error deleting user", error);
+    }
   };
 
   const columns = [
