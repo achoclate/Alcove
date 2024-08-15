@@ -20,7 +20,8 @@ const About = () => {
                 <div className="about-buttons">
                 <a href="#menu" className="about-button">→ VIEW MENU</a>
                 <a
-  href={`https://api.whatsapp.com/send?text=${encodeURIComponent('Home of culinary excellence!')}`}
+  href={`https://api.whatsapp.com/send?phone=254796963327&text=Home%20of%20culinary%20excellence%21
+)}`}
   className="about-button"
   target="_blank"
   rel="noopener noreferrer"

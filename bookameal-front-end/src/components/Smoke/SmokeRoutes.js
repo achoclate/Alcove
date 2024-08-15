@@ -6,7 +6,7 @@ import './SmokeApp.css';
 
 const SmokeRoutes = () => (
   <div>
-    <SmokeNavbar /> {/* Render Smoke specific navbar */}
+    <SmokeNavbar /> 
     <Routes>
       <Route path="/" element={<App />} />
       {/* Add other Smoke specific routes if needed */}
