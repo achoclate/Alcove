@@ -1,11 +1,19 @@
-// src/pages/foodMenu/FoodMenu.js
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./foodMenu.css";
 
 export default function FoodMenu() {
-  const [newFood, setNewFood] = useState({ name: "", category: "", image: null });
+  const [newFood, setNewFood] = useState({ name: "", category: "", price: "", image: null });
   const [foodList, setFoodList] = useState([]);
 
+  // Fetch food list from the backend on component mount
+  useEffect(() => {
+    fetch('http://localhost:5000/foods') // Ensure this URL matches your Flask server
+      .then(response => response.json())
+      .then(data => setFoodList(data))
+      .catch(error => console.error('Error fetching food data:', error));
+  }, []);
+
+  // Handle input changes for adding new food
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "image") {
@@ -15,29 +23,57 @@ export default function FoodMenu() {
     }
   };
 
-  const handleAddFood = (e) => {
+  // Handle adding new food
+  const handleAddFood = async (e) => {
     e.preventDefault();
-    setFoodList([...foodList, newFood]);
-    setNewFood({ name: "", category: "", image: null });
+    const formData = new FormData();
+    formData.append('name', newFood.name);
+    formData.append('category', newFood.category);
+    formData.append('price', newFood.price);
+    if (newFood.image) {
+      formData.append('file', newFood.image); // Changed 'image' to 'file' to match Flask backend
+    }
+
+    try {
+      await fetch('http://localhost:5000/foods', { // Ensure this URL matches your Flask server
+        method: 'POST',
+        body: formData,
+      });
+      // Refresh the food list after adding new food
+      const response = await fetch('http://localhost:5000/foods');
+      const data = await response.json();
+      setFoodList(data);
+      setNewFood({ name: "", category: "", price: "", image: null });
+    } catch (error) {
+      console.error('Error adding food:', error);
+    }
   };
 
   return (
     <div className="foodMenu">
-      <h1 className="foodMenuTitle">Food Menu</h1>
+      <h2 className="foodMenuTitle">Food Menu</h2>
       <form className="foodMenuForm" onSubmit={handleAddFood}>
         <input
           type="text"
           name="name"
-          value={newFood.name}
           placeholder="Food Name"
+          value={newFood.name}
           onChange={handleChange}
           required
         />
         <input
           type="text"
           name="category"
-          value={newFood.category}
           placeholder="Category"
+          value={newFood.category}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="price"
+          placeholder="Price"
+          value={newFood.price}
           onChange={handleChange}
           required
         />
@@ -45,7 +81,6 @@ export default function FoodMenu() {
           type="file"
           name="image"
           onChange={handleChange}
-          required
         />
         <button type="submit">Add Food</button>
       </form>
@@ -53,28 +88,24 @@ export default function FoodMenu() {
         <table className="foodMenuTable">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Name</th>
               <th>Category</th>
+              <th>Price</th>
               <th>Image</th>
             </tr>
           </thead>
           <tbody>
-            {foodList.map((food, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
+            {foodList.map((food) => (
+              <tr key={food.id}>
                 <td>{food.name}</td>
                 <td>{food.category}</td>
+                <td>${food.price.toFixed(2)}</td>
                 <td>
-                  {food.image ? (
-                    <img
-                      src={URL.createObjectURL(food.image)}
-                      alt={food.name}
-                      className="foodImage"
-                    />
-                  ) : (
-                    "No Image"
-                  )}
+                  <img
+                    src={`http://localhost:5000${food.image_url}`}
+                    alt={food.name}
+                    className="foodImage"
+                  />
                 </td>
               </tr>
             ))}

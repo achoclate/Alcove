@@ -29,7 +29,7 @@ function AdminRoutes() {
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/food-orders" element={<FoodOrders />} />
             <Route path="/food-menu" element={<FoodMenu />} />
-            <Route path="/admin/reservations" element={<ReservationsList />} />
+            <Route path="/reservations" element={<ReservationsList />} />
             <Route path="/meals" element={<Meals />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/logout" element={<Logout />} />

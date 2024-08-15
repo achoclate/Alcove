@@ -19,6 +19,7 @@ const Navigationbar = ({ user, onLogout }) => {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
+            <Nav.Link as={Link} to="/orders">Orders</Nav.Link> {/* New Orders Link */}
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
             
             <NavDropdown title="Our Brands" id="basic-nav-dropdown" className="navbar-dropdown">

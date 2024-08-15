@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,8 +12,10 @@ import ContactUs from './components/ContactUs/ContactUs';
 import MenuList from './components/MenuPage/MenuList';
 import SmokeApp from './components/Smoke/App';
 import Footer from './components/Footer/Footer';
-import UserProfile from './Pages/UserProfile/UserProfile'; // Import UserProfile
-import AdminRoutes from './Admin/AdminRoutes'; // Import AdminRoutes
+import UserProfile from './Pages/UserProfile/UserProfile';
+import Orders from './Orders/Orders';
+import MealOfTheDay from './Pages/MealOfTheDay/MealOfTheDay';
+import AdminRoutes from './Admin/AdminRoutes'; // Ensure AdminRoutes is properly implemented
 import './App.css';
 
 const App = () => {
@@ -46,7 +47,12 @@ const App = () => {
                   <Route path="/signup" element={<SignUp />} />
                   <Route path="/contact" element={<ContactUs />} />
                   <Route path="/menu" element={<MenuList />} />
+                  <Route path="/orders" element={<Orders />} />
                   <Route path="/smoke/*" element={<SmokeApp />} />
+                  <Route path="/" element={<Hero />} />
+
+                  <Route path="/meal-of-the-day" element={<MealOfTheDay />} />
+
                   <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} />
                   <Route path="*" element={<div>404 Not Found</div>} />
                 </Routes>
@@ -59,7 +65,7 @@ const App = () => {
         {/* Admin Routes */}
         <Route
           path="/admin/*"
-          element={<AdminRoutes />} // AdminRoutes will handle its own layout
+          element={<AdminRoutes />} // AdminRoutes should handle admin-specific layout and routing
         />
       </Routes>
     </Router>

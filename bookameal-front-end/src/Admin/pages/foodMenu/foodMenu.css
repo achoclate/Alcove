@@ -45,18 +45,31 @@
   border-collapse: collapse;
 }
 
-.foodMenuTable th,
-.foodMenuTable td {
-  border: 1px solid #ddd;
-  padding: 8px;
+.foodMenuTable th {
+  background-color: #4caf50;
+  color: #fff;
   text-align: left;
+  padding: 12px;
 }
 
-.foodMenuTable th {
-  background-color: #f4f4f4;
+.foodMenuTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  color: #333;
+}
+
+.foodMenuTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.foodMenuTable tr:hover {
+  background-color: #f1f1f1;
 }
 
 .foodImage {
-  max-width: 100px;
-  height: auto;
+  max-width: 100px; /* Adjust based on your layout */
+  height: auto;     /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible */
+  border-radius: 4px; /* Optional: adds rounded corners */
+  background-color: #f1f1f1; /* Optional: background color for better visibility */
 }

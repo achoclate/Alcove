@@ -1,10 +1,9 @@
 // src/components/Hero/Hero.js
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './Hero.css'; // Custom CSS file for additional styling
-import heroImage from '../../../../src/assets/heroImage.jpeg'
-// import heroImage from '../../assets/heroImage.jpeg'; // Ensure this path is correct
+import { Link } from 'react-router-dom';
+import './Hero.css';
+import heroImage from '../../../../src/assets/heroImage.jpeg';
 
 const Hero = () => {
   return (
@@ -17,7 +16,7 @@ const Hero = () => {
             <div className="hero-links">
               <Link to="/reservation" className="hero-link">Reserve a Table</Link>
               <span className="divider">|</span>
-              <a href="#menu" className="hero-link">View the Menu</a>
+              <Link to="/meal-of-the-day" className="hero-link">View the Menu</Link>
             </div>
           </Col>
         </Row>

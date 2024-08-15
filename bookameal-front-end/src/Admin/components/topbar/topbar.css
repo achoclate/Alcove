@@ -65,13 +65,15 @@
 
 .profileDropdown {
   position: absolute;
-  right: 0;
   top: 60px; /* Adjusted to be below the top bar */
+  right: 0;
   background-color: white;
+  border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
   z-index: 999;
+  width: 150px; /* Adjust width as needed */
 }
 
 .dropdownItem {
@@ -84,4 +86,28 @@
 
 .dropdownItem:hover {
   background-color: #f0f0f0;
+}
+
+/* Notification dropdown styling */
+.messagesDropdown {
+  position: absolute;
+  top: 100%; /* Position below the icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 300px; /* Adjust width as needed */
+  border-radius: 5px;
+}
+
+.dropdownMessage {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdownMessage:last-child {
+  border-bottom: none;
 }

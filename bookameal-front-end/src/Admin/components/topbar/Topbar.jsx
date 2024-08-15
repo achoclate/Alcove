@@ -1,14 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./topbar.css";
 import { NotificationsNone, Language, Settings, AccountCircle } from "@material-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Topbar({ setAuthenticated }) {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  const [messagesDropdownOpen, setMessagesDropdownOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [messageCount, setMessageCount] = useState(0);
   const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  useEffect(() => {
+    // Fetch contact messages from the backend when the component mounts
+    fetchMessages();
+  }, []);
+
+  const fetchMessages = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/contact_messages");
+      const data = await response.json();
+      setMessages(data);
+      setMessageCount(data.length);
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+    }
+  };
+
+  const toggleProfileDropdown = () => {
+    setProfileDropdownOpen(!profileDropdownOpen);
+    setMessagesDropdownOpen(false); // Close messages dropdown if open
+  };
+
+  const toggleMessagesDropdown = () => {
+    setMessagesDropdownOpen(!messagesDropdownOpen);
+    setProfileDropdownOpen(false); // Close profile dropdown if open
+
+    // Fetch messages again if dropdown is opened
+    if (!messagesDropdownOpen) {
+      fetchMessages();
+    }
   };
 
   const handleLogout = () => {
@@ -18,13 +48,13 @@ export default function Topbar({ setAuthenticated }) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.message);
-        localStorage.removeItem("authToken"); // Clear authentication data
+        localStorage.removeItem("authToken");
         if (typeof setAuthenticated === 'function') {
-          setAuthenticated(false); // Update authentication state
+          setAuthenticated(false);
         } else {
           console.error('setAuthenticated is not a function');
         }
-        navigate("/login"); // Redirect to login page
+        navigate("/login");
       })
       .catch((error) => {
         console.error("Logout error:", error);
@@ -41,20 +71,33 @@ export default function Topbar({ setAuthenticated }) {
       <div className="topbarWrapper">
         <div className="logo">Admin Panel</div>
         <div className="topRight">
-          <div className="topbarIconContainer">
+          <div className="topbarIconContainer" onClick={toggleMessagesDropdown}>
             <NotificationsNone />
-            <span className="topIconBadge">2</span>
+            <span className="topIconBadge">{messageCount}</span>
+            {messagesDropdownOpen && (
+              <div className="messagesDropdown">
+                {messages.length > 0 ? (
+                  messages.map((msg) => (
+                    <div key={msg.id} className="dropdownMessage">
+                      <strong>{msg.name}</strong> ({msg.email}): {msg.message}
+                    </div>
+                  ))
+                ) : (
+                  <div>No messages</div>
+                )}
+              </div>
+            )}
           </div>
           <div className="topbarIconContainer">
             <Language />
             <span className="topIconBadge">2</span>
           </div>
-          <div className="topbarIconContainer" onClick={toggleDropdown}>
+          <div className="topbarIconContainer">
             <Settings />
           </div>
           <div className="topbarProfileContainer">
-            <AccountCircle className="topAvatar" onClick={toggleDropdown} />
-            {dropdownOpen && (
+            <AccountCircle className="topAvatar" onClick={toggleProfileDropdown} />
+            {profileDropdownOpen && (
               <div className="profileDropdown">
                 <Link to="/profile" className="dropdownItem">
                   Profile

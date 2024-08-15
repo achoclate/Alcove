@@ -7,8 +7,8 @@ const ContactUs = () => {
     email: "",
     message: "",
   });
-  const [successMessage, setSuccessMessage] = useState(""); // State for success message
-  const [errorMessage, setErrorMessage] = useState(""); // State for error messages
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -19,8 +19,8 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccessMessage(""); // Clear previous success message
-    setErrorMessage(""); // Clear previous error messages
+    setSuccessMessage("");
+    setErrorMessage("");
 
     try {
       const response = await fetch("http://localhost:5000/contact", {
@@ -33,15 +33,13 @@ const ContactUs = () => {
 
       if (response.ok) {
         setSuccessMessage("Message sent successfully.");
-        setFormData({ name: "", email: "", message: "" }); // Reset form
+        setFormData({ name: "", email: "", message: "" });
       } else {
         const data = await response.json();
         setErrorMessage(data.message || "Error submitting form.");
-        console.error("Error submitting form:", data.message);
       }
     } catch (error) {
       setErrorMessage("Network error: " + error.message);
-      console.error("Network error:", error);
     }
   };
 

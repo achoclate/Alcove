@@ -1,16 +1,27 @@
-// src/components/MealOfTheDay/MealOfTheDay.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MealOfTheDay.css';
 
 const MealOfTheDay = () => {
   const [selectedMeal, setSelectedMeal] = useState(null);
+  const [menuOptions, setMenuOptions] = useState([]);
 
-  const menuOptions = [
-    { id: 1, name: 'Grilled Chicken Salad' },
-    { id: 2, name: 'Vegetarian Pizza' },
-    { id: 3, name: 'Beef Burger' },
-    { id: 4, name: 'Spaghetti Bolognese' },
-  ];
+  useEffect(() => {
+    const fetchMenuOptions = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/foods'); // Adjust URL if needed
+        if (response.ok) {
+          const data = await response.json();
+          setMenuOptions(data);
+        } else {
+          console.error('Error fetching menu options:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error fetching menu options:', error);
+      }
+    };
+
+    fetchMenuOptions();
+  }, []);
 
   const handleMealSelection = (meal) => {
     setSelectedMeal(meal);
@@ -20,13 +31,24 @@ const MealOfTheDay = () => {
   return (
     <div className="meal-of-the-day">
       <h1>Meal of the Day</h1>
-      <p>Hello, the menu items for today are specially crafted for you!</p>
-      <ul>
+      <p>Explore our special menu items crafted just for you today!</p>
+      <ul className="menu-list">
         {menuOptions.map((meal) => (
-          <li key={meal.id}>
-            <button onClick={() => handleMealSelection(meal)}>
+          <li key={meal.id} className="menu-item">
+            <button onClick={() => handleMealSelection(meal)} className="meal-button">
               {meal.name}
             </button>
+            <div className="meal-details">
+              {meal.image_url && (
+                <img
+                  src={`http://localhost:5000${meal.image_url}`} // Ensure this matches your Flask server setup
+                  alt={meal.name}
+                  className="meal-image"
+                />
+              )}
+              <p>Category: {meal.category}</p>
+              <p>Price: ${meal.price.toFixed(2)}</p>
+            </div>
           </li>
         ))}
       </ul>
@@ -34,7 +56,18 @@ const MealOfTheDay = () => {
       {selectedMeal && (
         <div className="selected-meal">
           <h3>You have selected: {selectedMeal.name}</h3>
-          <button onClick={() => setSelectedMeal(null)}>Change Selection</button>
+          {selectedMeal.image_url && (
+            <img
+              src={`http://localhost:5000${selectedMeal.image_url}`} // Ensure this matches your Flask server setup
+              alt={selectedMeal.name}
+              className="selected-meal-image"
+            />
+          )}
+          <p>Category: {selectedMeal.category}</p>
+          <p>Price: ${selectedMeal.price.toFixed(2)}</p>
+          <button onClick={() => setSelectedMeal(null)} className="change-selection-button">
+            Change Selection
+          </button>
         </div>
       )}
     </div>
