@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+
+/* Container and layout */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  padding: 12px;
+  background-color: #b8a3a3;
+  font-family: "Poppins", sans-serif; /* Default font family */
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1200px; */
+  /* max-width: 100vh; */
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #070707;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+@media (min-width: 640px) {
+  .about-content {
+    flex-direction: row;
+  }
+}
+
+/* Image styling */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.biryani-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Text content styling */
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif; /* Use Roboto for title */
+}
+
+.about-description {
+  font-size: 1rem;
+  color: #fffcfc;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif; /* Use Poppins for description */
+}
+
+/* Icon container styling */
+/* .icon-container {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-style {
+  font-size: 2rem;
+}
+
+.icon-box:first-child {
+  background-color: #e0c1ff;
+}
+
+.icon-box:nth-child(2) {
+  background-color: #ffdfa0;
+}
+
+.icon-box:last-child {
+  background-color: #c3f3c1;
+}
+
+/* Button styling */
+/* .order-button {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif; 
+
+.order-button:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+} */

@@ -13,9 +13,11 @@ import MenuList from './components/MenuPage/MenuList';
 import SmokeApp from './components/Smoke/App';
 import Footer from './components/Footer/Footer';
 import UserProfile from './Pages/UserProfile/UserProfile';
-import Orders from './Orders/Orders';
+import Orders from './components/Orders/Orders';
 import MealOfTheDay from './Pages/MealOfTheDay/MealOfTheDay';
 import AdminRoutes from './Admin/AdminRoutes'; // Ensure AdminRoutes is properly implemented
+import BrunchRoutes from "./components/Brunch/BrunchRoutes";
+// import Notifications from "./components/Notifications/Notifications";
 import './App.css';
 
 const App = () => {
@@ -50,7 +52,8 @@ const App = () => {
                   <Route path="/orders" element={<Orders />} />
                   <Route path="/smoke/*" element={<SmokeApp />} />
                   <Route path="/" element={<Hero />} />
-
+                  <Route path="/brunch" element={<BrunchRoutes />} />{" "}
+                  {/* <Route path="/notifications" element={<Notifications />} /> */}
                   <Route path="/meal-of-the-day" element={<MealOfTheDay />} />
 
                   <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} />

@@ -9,8 +9,11 @@ const Chef = () => (
       <img src={chefImage} alt="chef_image" />
     </div>
     <div className="app__wrapper_info">
-      <SubHeading title="Chef's word" />
-      <h1 className="headtext__cormorant" style={{ color: 'white' }}>Relentless Passion</h1>
+      <SubHeading title="Chef's word" style={{ fontFamily: 'Montserrat, sans-serif' }}/>
+      <h2 className="headtext__cormorant" style={{ color: 'white', fontFamily: 'Montserrat, sans-serif' }}>
+  Relentless Passion
+</h2>
+
       <div className="app__chef-content">
         <div className="app__chef-content_quote">
           <p className="p__opensans">Welcome to Alcove, where culinary excellence meets innovative artistry..</p>

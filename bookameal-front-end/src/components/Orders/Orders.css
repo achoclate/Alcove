@@ -1,0 +1,190 @@
+/* Import the Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif; /* Apply Montserrat font */
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+  overflow-y: auto;
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+}
+
+/* Content Container */
+.content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+/* Cart Section Styles */
+.order-cart {
+  background-color: black; /* Ensure background is black */
+  padding: 7vh;
+  margin: 0;
+  width: 50%;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+/* Summary Section Styles */
+.order-summary {
+  background-color: white; /* Set background to white */
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 4vh;
+  width: 50%;
+  color: black; /* Ensure text is black for readability */
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+/* Main Row Styles */
+.order-main {
+  margin: 0;
+  padding: 2vh 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+.order-row {
+  margin: 0;
+}
+
+.order-col-2,
+.order-col {
+  padding: 0 1vh;
+}
+
+.order-title b {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+.order-close {
+  margin-left: auto;
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: white; /* Ensure text is white */
+}
+
+.order-back-to-shop {
+  margin-top: 4.5rem;
+}
+
+.order-back-to-shop a {
+  padding: 0 1vh;
+  color: white; /* Ensure link color is white */
+}
+
+h5 {
+  margin-top: 4vh;
+  font-size: large;
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+hr {
+  margin-top: 1.25rem;
+  border-color: white; /* Ensure hr color is white */
+}
+
+form {
+  padding: 2vh 0;
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+select,
+input {
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Use white border */
+  padding: 1.5vh 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+  background-color: black; /* Set background to black */
+  color: white; /* Set text color to white */
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Set placeholder color to light white */
+}
+
+.order-btn {
+  background-color: black; /* Set background to black */
+  border-color: black; /* Border color to black */
+  color: white; /* Set text color to white */
+  width: 100%;
+  font-size: 0.7rem;
+  margin-top: 4vh;
+  padding: 1vh;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+}
+
+.order-btn:focus {
+  box-shadow: none;
+  outline: none;
+  color: white; /* Ensure color stays white */
+}
+
+.order-btn:hover {
+  color: white; /* Ensure color stays white */
+}
+
+a {
+  color: white; /* Ensure links are white */
+}
+
+a:hover {
+  color: white; /* Ensure hover color is white */
+  text-decoration: none;
+}
+
+#order-code {
+  background-image: linear-gradient(
+      to left,
+      white,
+      rgba(255, 255, 255, 0.185)
+    ),
+    url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
+}
+
+@media (max-width: 767px) {
+  .content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .order-cart {
+    padding: 4vh;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .order-summary {
+    padding: 4vh;
+    width: 100%;
+    border-radius: 0;
+  }
+}

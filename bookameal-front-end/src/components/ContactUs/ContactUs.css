@@ -11,11 +11,15 @@
     padding: 2rem;
     margin-top: 20px; /* Adjust based on the height of your navbar */
     font-family: 'Montserrat', sans-serif;
-
+    color: white; /* Set text color to white for better visibility */
 }
 
 .contact-us-content {
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222; /* Slightly lighter black for contrast */
     padding: 2rem;
     border-radius: 8px;
     max-width: 600px;
@@ -26,6 +30,11 @@
 .contact-us-content h2 {
     text-align: center;
     margin-bottom: 1rem;
+    color: #fff; /* Ensure header text is white */
+}
+
+.contact-form {
+    width: 100%;
 }
 
 .contact-form .form-group {
@@ -35,14 +44,17 @@
 .contact-form .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    color: #fff; /* Ensure labels are white */
 }
 
 .contact-form .form-group input,
 .contact-form .form-group textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #000;
+    border: 1px solid #333; /* Dark gray border for contrast */
     border-radius: 4px;
+    background-color: #333; /* Dark background for form fields */
+    color: #fff; /* White text inside form fields */
 }
 
 .contact-form .form-group textarea {

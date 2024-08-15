@@ -4,48 +4,59 @@ body, html {
   height: 100%;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .wrapper {
-  width: 100%;
-  height: calc(100vh - 60px); /* Adjust height to leave space for the navbar */
-  margin-top: 60px; /* Space for the navbar, adjust as needed */
-  background-image: url('../../assets/login.jpeg');
+  position: relative;
+  margin-top: 20rem;
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('../../assets/login.jpeg'); /* Background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 40px;
-  font-family: 'Montserrat', sans-serif;
-
+  padding-right: 50rem;
+  
 }
 
-.wrapper h1 {
-  font-size: 36px;
+/* Form styling */
+form {
+  background: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
   text-align: center;
-  color: #fff;
+  color: #fff; /* Ensure text is visible */
 }
 
-.wrapper .input-box {
+/* Header style */
+form h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Input box styling */
+.input-box {
   position: relative;
   width: 100%;
-  height: 50px;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .input-box input {
   width: 100%;
-  height: 100%;
+  padding: 15px 45px 15px 20px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  outline: none;
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
-  padding: 20px 45px 20px 20px;
+  outline: none;
 }
 
 .input-box input::placeholder {
@@ -58,13 +69,15 @@ body, html {
   top: 50%;
   transform: translateY(-50%);
   font-size: 16px;
+  color: #fff;
 }
 
-.wrapper .remember-forgot {
+/* Remember me and forgot password section */
+.remember-forgot {
   display: flex;
   justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
+  font-size: 14px;
+  margin: -10px 0 20px;
 }
 
 .remember-forgot label input {
@@ -81,9 +94,10 @@ body, html {
   text-decoration: underline;
 }
 
-.wrapper button {
+/* Login button */
+button {
   width: 100%;
-  height: 100%;
+  padding: 15px;
   background: #fff;
   border: none;
   outline: none;
@@ -93,50 +107,54 @@ body, html {
   font-size: 16px;
   color: #333;
   font-weight: 700;
-  padding: 10px 0;
+  margin-top: 10px;
 }
 
-.wrapper .register-link {
-  font-size: 14.5px;
-  text-align: center;
-  margin-top: 20px 0 15px;
+/* Register link */
+.register-link {
+  font-size: 14px;
+  margin-top: 20px;
 }
 
-.register-link p a {
+.register-link p {
+  margin: 0;
+}
+
+.register-link a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
 
-.register-link p a:hover {
+.register-link a:hover {
   text-decoration: underline;
 }
 
-/* Ensure the form stays responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .wrapper {
-    padding: 20px 30px;
+    padding: 20px;
   }
 
-  .wrapper h1 {
+  form h1 {
     font-size: 28px;
   }
 
   .input-box {
-    margin: 20px 0;
+    margin: 15px 0;
   }
 }
 
 @media (max-width: 480px) {
   .wrapper {
-    padding: 15px 20px;
+    padding: 15px;
   }
 
-  .wrapper h1 {
+  form h1 {
     font-size: 24px;
   }
 
   .input-box {
-    margin: 15px 0;
+    margin: 10px 0;
   }
 }

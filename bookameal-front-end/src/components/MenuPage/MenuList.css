@@ -1,22 +1,21 @@
+/* Global Styles */
 body {
-  /* background-color: black; Set the background color of the entire page */
+  background-color: black; 
   color: white; /* Set the default text color to white */
   margin: 0; /* Remove default margin */
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Montserrat', sans-serif; /* Global font setting */
 }
 
+/* Main Content Area */
 .main {
   padding: 20px;
-  height: 100vh;
+  height: calc(100vh - 60px - 40px); /* Full height minus the space for navbar and footer */
   overflow-y: auto; /* Enable scrolling for the main container */
-  /*background-color: rgb(6, 5, 5);  Ensure the background color for the main container matches the body */
 }
 
+/* Heading Styles */
 .heading {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
-
 }
 
 .heading h1 {
@@ -24,51 +23,62 @@ body {
   font-size: 2.5rem; /* Adjust font size as needed */
   font-weight: bold; /* Make text bold */
   margin-top: 40px; /* Add spacing around the heading */
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
 }
 
 .heading h4 {
   color: white; /* Set subheading text color to white */
   font-size: 1.2rem; /* Adjust font size as needed */
   margin: 10px 0; /* Add spacing around the subheading */
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
 }
 
+/* Filter Section */
 .filters {
   margin: 20px 0;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: center; /* Center the filters horizontally */
   align-items: center;
+  gap: 10px; /* Add space between elements */
 }
 
 .filters select, .filters input[type="text"] {
-  margin: 10px 0;
+  margin: 0 10px; /* Adjust margin to control spacing */
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
   background-color: #333; /* Dark background for input/select elements */
   color: white; /* White text for input/select elements */
+  flex: 1; /* Allow elements to take equal space */
+  max-width: 200px; /* Ensure the elements don't cover full width */
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
 }
 
+/* Rounded Filter Buttons */
 .filters button {
-  margin: 10px 0; /* Adjust margin if needed */
-  padding: 10px 15px;
+  padding: 12px 20px; /* Adjusted padding for a more substantial button */
   border: none;
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  border-radius: 5px;
+  background-color: #4CAF50; /* A professional, appealing green color */
+  color: white;
+  border-radius: 50px; /* Rounded corners for a modern look */
+  font-size: 1rem;
+  font-weight: bold; /* Bold text for emphasis */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: none; /* Ensure the button maintains its size */
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
 }
 
 .filters button:hover {
-  background-color: #0056b3; /* Button hover color */
+  background-color: #45a049; /* Slightly darker green on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
+/* Container for Menu Items */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -76,6 +86,7 @@ body {
   justify-content: center;
 }
 
+/* Not Found & Loading States */
 .notFound,
 .loading {
   text-align: center;
@@ -91,14 +102,17 @@ body {
   color: blue; /* Keep the blue color for loading messages */
 }
 
+/* Meal Section */
 .meal-section {
   margin-top: 60px; /* Increased margin to ensure heading and content are visible */
 }
 
 .meal-section h1 {
   text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
 }
 
+/* Menu Section */
 .menu-section {
   display: flex;
   flex-wrap: wrap;
@@ -112,4 +126,5 @@ body {
   box-sizing: border-box; /* Ensures padding and border are included in the width */
   background-color: #222; /* Dark background for meal cards */
   color: white; /* White text color for meal cards */
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied */
 }
