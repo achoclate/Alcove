@@ -1,0 +1,86 @@
+.app__aboutus {
+    position: relative;
+    display: flex;
+    height: 100vh; /* Ensuring it takes full viewport height */
+    color: #fff;
+}
+
+.about-image-section {
+    flex: 1;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1; /* To overlay with content */
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background-color: #0e0e0e;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 400px;
+    color: var(--color-grey);
+}
+
+.about-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    max-width: fit-content;
+}
+
+.about-button:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Responsive Adjustments */
+@media screen and (min-width: 2000px) {
+    .about-description {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .app__aboutus,
+    .about-content-section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-image {
+        width: 100%;
+        height: auto;
+    }
+}

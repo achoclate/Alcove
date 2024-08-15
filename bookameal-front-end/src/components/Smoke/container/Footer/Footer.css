@@ -1,0 +1,105 @@
+.app__footer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--color-black);
+    padding-top: 0;
+    padding-bottom: 1rem; /* Adjusted padding to reduce height */
+}
+
+.app__footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 2.5rem; /* Reduced margin-top to make footer shorter */
+    padding: 0 1rem; /* Reduced padding */
+}
+
+.app__footer-links_contact,
+.app__footer-links_logo,
+.app__footer-links_work {
+    flex: 1;
+    margin: 0.5rem; /* Reduced margin */
+    text-align: center;
+}
+
+.app__footer-links_logo img:first-child {
+    width: 105px; /* Reduced width */
+    margin-bottom: 0.375rem; /* Reduced margin-bottom */
+}
+
+.app__footer-links_work p:nth-child(2n + 1) {
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+}
+
+.app__footer-links_icons {
+    margin-top: 0.25rem; /* Reduced margin-top */
+}
+
+.app__footer-links_icons svg {
+    color: var(--color-white);
+    margin: 0.25rem; /* Reduced margin */
+    font-size: 12px; /* Reduced font-size */
+    cursor: pointer;
+}
+
+.app__footer-links_icons svg:hover {
+    color: var(--color-golden);
+}
+
+.app__footer-headtext {
+    font-family: var(--font-base);
+    color: var(--color-white);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-size: 16px; /* Reduced font-size */
+    line-height: 21.6px; /* Adjusted line-height */
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+}
+
+.footer__copyright {
+    margin-top: 1.5rem; /* Reduced margin-top */
+}
+
+@media screen and (min-width: 2000px) {
+    .app__footer-headtext {
+        font-size: 25px; /* Reduced font-size */
+        line-height: 31.6px; /* Adjusted line-height */
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__footer-links {
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .app__footer-links_contact,
+    .app__footer-links_logo,
+    .app__footer-links_work {
+        margin: 1rem 0; /* Reduced margin */
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__footer {
+        padding: 0 0 1rem 0; /* Adjusted padding */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .app__footer-links_logo img:first-child {
+        width: 60%; /* Further reduced width */
+    }
+}

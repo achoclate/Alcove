@@ -1,0 +1,113 @@
+/* Top Bar Styling */
+.topbar {
+  width: 100%;
+  height: 60px; /* Height for the Topbar */
+  background-color: white;
+  position: fixed; /* Fixed positioning to stay at the top */
+  top: 0;
+  z-index: 1000; /* Ensure it is above other elements */
+  border-bottom: 1px solid #e0e0e0; /* Light border for separation */
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(0, 139, 53);
+  cursor: pointer;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-right: 15px; /* Margin for spacing */
+  color: #555;
+}
+
+.topIconBadge {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -5px;
+  right: -5px; /* Positioned to fit within icon container */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.topAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover; /* Ensure circular shape */
+}
+
+.topbarProfileContainer {
+  position: relative;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 60px; /* Adjusted to be below the Topbar */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000; /* Ensure dropdown is above other content */
+  width: 150px;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+
+/* Notification dropdown styling */
+.messagesDropdown {
+  position: absolute;
+  top: 60px; /* Position below the Topbar */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000; /* Ensure dropdown is above other content */
+  width: 300px;
+  border-radius: 5px;
+}
+
+.dropdownMessage {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdownMessage:last-child {
+  border-bottom: none;
+}

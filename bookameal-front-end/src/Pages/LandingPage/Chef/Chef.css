@@ -1,0 +1,31 @@
+.app__chef-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem; /* Reduced margin to decrease space at the top */
+    color: white; 
+}
+
+.app__chef-content_quote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 1.5rem; /* Add margin-bottom to reduce space below the quote */
+    color: white; 
+}
+
+.app__chef-sign {
+    width: 100%;
+    margin-top: 2rem; /* Reduced margin to decrease space above the signature */
+    color: white; 
+}
+
+.app__chef-sign p:first-child {
+    font-family: var(--font-base);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px; /* Reduced line-height to decrease space between lines */
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: var(--color-golden);
+}

@@ -1,0 +1,71 @@
+/* Sidebar Styling */
+.sidebar {
+  height: calc(100vh - 60px); /* Adjust for top bar height (60px) */
+  width: 250px;
+  background-color: #ffffff; /* White background for the sidebar */
+  color: #000000; /* Black text for better contrast */
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; /* Align below the top bar */
+  left: 0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow-y: auto; /* Allow scrolling if needed */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #000000; /* Black text for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ff5722; /* Accent color on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.sidebar ul li a.active {
+  background-color: #ff5722; /* Highlight active link */
+  color: #ffffff; /* White text for active link */
+}
+
+.sidebar ul li a .icon {
+  margin-right: 10px;
+}
+
+.sidebar ul li a .text {
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+}

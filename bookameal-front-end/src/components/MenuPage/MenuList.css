@@ -1,0 +1,115 @@
+body {
+  /* background-color: black; Set the background color of the entire page */
+  color: white; /* Set the default text color to white */
+  margin: 0; /* Remove default margin */
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.main {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Enable scrolling for the main container */
+  /*background-color: rgb(6, 5, 5);  Ensure the background color for the main container matches the body */
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.heading h1 {
+  color: white; /* Set heading text color to white */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make text bold */
+  margin-top: 40px; /* Add spacing around the heading */
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.heading h4 {
+  color: white; /* Set subheading text color to white */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  margin: 10px 0; /* Add spacing around the subheading */
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.filters {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filters select, .filters input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #333; /* Dark background for input/select elements */
+  color: white; /* White text for input/select elements */
+}
+
+.filters button {
+  margin: 10px 0; /* Adjust margin if needed */
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+  background-color: #0056b3; /* Button hover color */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.notFound,
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: white; /* Ensure text color is white for loading and notFound messages */
+}
+
+.notFound {
+  color: red; /* Keep the red color for the notFound messages */
+}
+
+.loading {
+  color: blue; /* Keep the blue color for loading messages */
+}
+
+.meal-section {
+  margin-top: 60px; /* Increased margin to ensure heading and content are visible */
+}
+
+.meal-section h1 {
+  text-align: center;
+}
+
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between cards */
+  margin-top: 20px; /* Optional: add spacing from the top */
+  justify-content: center; /* Center align cards if needed */
+}
+
+.menu-section .meal-card {
+  flex: 1 1 calc(33.333% - 20px); /* Three cards per row with gap */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  background-color: #222; /* Dark background for meal cards */
+  color: white; /* White text color for meal cards */
+}

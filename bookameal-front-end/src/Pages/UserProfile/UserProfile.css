@@ -1,0 +1,35 @@
+
+.profile-container {
+    margin-top: 3rem; /* Increase top margin for more space */
+  }
+  
+  .profile-card {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 600px; /* Limit the width for a spacious look */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  
+  .profile-card-title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem; /* Larger title for better visibility */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .profile-card-text {
+    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    color: #555;
+  }
+  
+  .profile-card-button {
+    margin-top: 1rem;
+  }
+  
+  button.ms-2 {
+    margin-left: 0.5rem; /* Spacing between buttons */
+  }
+  

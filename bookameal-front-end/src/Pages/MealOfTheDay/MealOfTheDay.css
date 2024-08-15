@@ -1,0 +1,119 @@
+/* Ensure there's space for the Navbar */
+body {
+    padding-top: 60px; /* Adjust based on your Navbar height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font */
+  }
+  
+  .meal-of-the-day {
+    text-align: center;
+    padding: 40px; /* Increased padding for spaciousness */
+    background-color: #f8f9fa;
+    min-height: 80vh; /* Ensure the page takes up at least 80% of the viewport height */
+  }
+  
+  .meal-of-the-day h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger font size for heading */
+    color: #333;
+  }
+  
+  .meal-of-the-day p {
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    color: #666;
+    margin-bottom: 30px; /* More space below the paragraph */
+  }
+  
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between menu items */
+  }
+  
+  .menu-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 300px; /* Increased width for larger card size */
+    text-align: center;
+  }
+  
+  .meal-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px; /* Larger font size for the button */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .meal-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .meal-details {
+    margin-top: 15px;
+  }
+  
+  .meal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .selected-meal {
+    margin-top: 40px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Maximum width for the selected meal details */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .selected-meal h3 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Larger font size for the heading */
+    color: #333;
+  }
+  
+  .selected-meal p {
+    font-size: 1.2rem; /* Larger font size for better readability */
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .selected-meal-image {
+    width: 200px; /* Larger image size */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  .change-selection-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px; /* Larger font size for the button */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .change-selection-button:hover {
+    background-color: #c82333;
+  }
+  

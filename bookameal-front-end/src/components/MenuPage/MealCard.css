@@ -1,0 +1,124 @@
+/* Container for meal cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Gap between cards */
+    margin: 0 20px; /* Margin for the container */
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  /* Each card should take up one-third of the container width, minus the gap */
+  .card-container .card {
+    flex: 1 1 calc(33.333% - 16px); /* Three cards per row with gap */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Additional styles for the card section */
+  .card-section {
+    padding: 16px;
+  }
+  
+  .card-section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+  
+  .info {
+    padding: 15px;
+    background: #050127;
+    text-align: center;
+  }
+  
+  .info h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .info p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Popup styling */
+  .popup {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background: #02040c;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .popup-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .popup-content h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .popup-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .popup-content ul li {
+    background: #16011d;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .popup-content button {
+    background-color: red;
+    color: #0d1ad3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .popup-content button:hover {
+    background-color: #ff4500;
+  }
+  
+  .order-now-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .order-now-button:hover {
+    background-color: #dd4e35;
+  }
+  
