@@ -169,59 +169,6 @@
 // //   </OrderProvider>
 // // );
 // // export default App;
-// import React from "react";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import NavigationBar from "./components/Navbar/Navbar";
-// import Hero from "./Pages/LandingPage/Hero/Hero";
-// import Chef from "./Pages/LandingPage/Chef/Chef";
-// import Reservation from "./Pages/Reservation/Reservation";
-// import AboutUs from "./Pages/About/About";
-// import "./App.css";
-// import Footer from "./components/Footer/Footer";
-// import SignUp from "./components/SignUp/SignUp";
-// import MenuList from "./components/MenuPage/MenuList";
-// import Login from "./components/Login/Login";
-// import ContactUs from "./components/ContactUs/ContactUs";
-// import Orders from "./Pages/Orders/Orders";
-// import { OrderProvider } from "../src/Pages/Orders/Order";
-// import Notifications from "./components/Notifications/Notifications";
-// import BrunchRoutes from "./components/Brunch/BrunchRoutes";
-
-// const App = () => (
-//   <OrderProvider>
-//     {" "}
-//     {/* Wrap your application with OrderProvider */}
-//     <Router>
-//       <NavigationBar /> {/* Add Navigationbar here to appear on every page */}
-//       <Routes>
-//         <Route
-//           path="/"
-//           element={
-//             <>
-//               <Hero />
-//               <Chef />
-//             </>
-//           }
-//         />
-//         <Route path="/about" element={<AboutUs />} />{" "}
-//         {/* About Us page route */}
-//         <Route path="/reservation" element={<Reservation />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/signup" element={<SignUp />} />
-//         <Route path="/contact" element={<ContactUs />} />
-//         <Route path="/menu" element={<MenuList />} />
-//         <Route path="/orders" element={<Orders />} />
-//         <Route path="/notifications" element={<Notifications />} />
-//         <Footer />
-//         <Route path="/brunch" element={<BrunchRoutes />} />{" "}
-//         {/* Updated path for brunch routes */}
-//       </Routes>
-//     </Router>
-//   </OrderProvider>
-// );
-
-// export default App;
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -243,106 +190,160 @@ import BrunchRoutes from "./components/Brunch/BrunchRoutes";
 
 const App = () => (
   <OrderProvider>
+    {" "}
+    {/* Wrap your application with OrderProvider */}
     <Router>
+      <NavigationBar /> {/* Add NavigationBar here to appear on every page */}
       <Routes>
-        {/* Routes with Navbar and Footer */}
         <Route
           path="/"
           element={
             <>
-              <NavigationBar />
               <Hero />
               <Chef />
-              <Footer />
             </>
           }
         />
-        <Route
-          path="/about"
-          element={
-            <>
-              <NavigationBar />
-              <AboutUs />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/reservation"
-          element={
-            <>
-              <NavigationBar />
-              <Reservation />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <>
-              <NavigationBar />
-              <Login />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/signup"
-          element={
-            <>
-              <NavigationBar />
-              <SignUp />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <NavigationBar />
-              <ContactUs />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/menu"
-          element={
-            <>
-              <NavigationBar />
-              <MenuList />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/orders"
-          element={
-            <>
-              <NavigationBar />
-              <Orders />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/notifications"
-          element={
-            <>
-              <NavigationBar />
-              <Notifications />
-              <Footer />
-            </>
-          }
-        />
-
-        {/* Routes without Navbar and Footer */}
-        <Route path="/brunch/*" element={<BrunchRoutes />} />
+        <Route path="/about" element={<AboutUs />} />{" "}
+        {/* About Us page route */}
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/menu" element={<MenuList />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/brunch" element={<BrunchRoutes />} />{" "}
+        {/* Updated path for brunch routes */}
       </Routes>
+      <Footer /> {/* Move Footer outside of Routes */}
     </Router>
   </OrderProvider>
 );
 
 export default App;
+
+// import React from "react";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import NavigationBar from "./components/Navbar/Navbar";
+// import Hero from "./Pages/LandingPage/Hero/Hero";
+// import Chef from "./Pages/LandingPage/Chef/Chef";
+// import Reservation from "./Pages/Reservation/Reservation";
+// import AboutUs from "./Pages/About/About";
+// import "./App.css";
+// import Footer from "./components/Footer/Footer";
+// import SignUp from "./components/SignUp/SignUp";
+// import MenuList from "./components/MenuPage/MenuList";
+// import Login from "./components/Login/Login";
+// import ContactUs from "./components/ContactUs/ContactUs";
+// import Orders from "./Pages/Orders/Orders";
+// import { OrderProvider } from "../src/Pages/Orders/Order";
+// import Notifications from "./components/Notifications/Notifications";
+// import BrunchRoutes from "./components/Brunch/BrunchRoutes";
+
+// const App = () => (
+//   <OrderProvider>
+//     <Router>
+//       <Routes>
+//         {/* Routes with Navbar and Footer */}
+//         <Route
+//           path="/"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <Hero />
+//               <Chef />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/about"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <AboutUs />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/reservation"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <Reservation />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/login"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <Login />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/signup"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <SignUp />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/contact"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <ContactUs />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/menu"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <MenuList />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/orders"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <Orders />
+//               <Footer />
+//             </>
+//           }
+//         />
+//         <Route
+//           path="/notifications"
+//           element={
+//             <>
+//               <NavigationBar />
+//               <Notifications />
+//               <Footer />
+//             </>
+//           }
+//         />
+
+//         {/* Routes without Navbar and Footer */}
+//         <Route path="/brunch/*" element={<BrunchRoutes />} />
+//       </Routes>
+//     </Router>
+//   </OrderProvider>
+// );
+
+// export default App;
