@@ -116,7 +116,6 @@ Alcove is an intuitive online meal booking application designed to allow custome
 
 ## Authors
 - [Wilson Gitonga](https://github.com/wilsonwahome)
-- [Abdifatah Farah](https://github.com/Dadir)
 - [Ann Achoki](https://github.com/achoclate)
 - [Virginia Gichira](https://github.com/gichira22)
 - [Mustafa Adan](https://github.com/MUSTIADO)
