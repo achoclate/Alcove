@@ -40,8 +40,7 @@ const MenuList = () => {
     const updatedOrders = [...orders, order];
     setOrders(updatedOrders);
     localStorage.setItem("orders", JSON.stringify(updatedOrders));
-    setNotificationCount(notificationCount + 1);
-    sendEmailNotification(order);
+    setNotificationCount(updatedOrders.length);
   };
 
   const handleSort = (type) => {
@@ -68,11 +67,6 @@ const MenuList = () => {
     meal[filterOption].toLowerCase().includes(searchTerm)
   );
 
-  const sendEmailNotification = (order) => {
-    // Implement backend service
-    console.log("Sending email notification for order:", order);
-  };
-
   return (
     <div className="main">
       <div className="heading">
@@ -94,7 +88,6 @@ const MenuList = () => {
           <option value="strCategory">Category</option>
           <option value="price">Price</option>
         </select>
-        {/* <button onClick={() => handleSort(sortType)}>Sort</button> */}
       </div>
       <div className="container">
         {loading ? (

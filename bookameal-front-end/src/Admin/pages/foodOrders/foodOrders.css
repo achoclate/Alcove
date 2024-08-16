@@ -1,6 +1,7 @@
 .foodOrders {
   flex: 4;
   padding: 20px;
+  margin-top: 5rem;
 }
 
 .foodOrdersTitle {
@@ -27,5 +28,6 @@
 }
 
 .foodOrdersTable th {
-  background-color: #f4f4f4;
+  background-color: black;
+
 }

@@ -1,6 +1,7 @@
 .transactions {
   flex: 4;
   padding: 20px;
+  margin-top: 5rem;
 }
 
 .transactionsTitle {
@@ -27,5 +28,5 @@
 }
 
 .transactionsTable th {
-  background-color: #f4f4f4;
+  background-color: black;
 }

@@ -1,232 +1,125 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Payment.css */
+.payment-page {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-html {
-  font-size: 62.5%; /* 10/16 = 0.625 * 100 */
+.payment-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0056b3;
 }
 
-body {
-  font-family: "Montserrat", sans-serif; /* Ensure the font is correctly applied */
-  background: url("../images/food2.jpg");
-  background-position: center;
-  background-size: cover;
-  backdrop-filter: blur(8px);
-  color: #3c3c39;
+.order-summary {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.order-summary-items {
+  margin-bottom: 20px;
+}
+
+.order-summary-item {
   display: flex;
-  justify-content: center;
-  height: 100vh;
-  position: relative;
-  padding: 2rem 0;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.checkout-container {
-  max-width: 200rem; /* Increased width */
-  height: 60rem; /* Increased height */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+.item-name {
+  font-size: 1em;
+  color: #555;
 }
 
-em {
-  font-style: normal;
-  font-weight: 700;
+.item-quantity, .item-price {
+  font-size: 1em;
+  color: #777;
 }
 
-hr {
+.order-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.total-label {
+  color: #333;
+}
+
+.total-price {
+  color: #0056b3;
+}
+
+.payment-methods {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.payment-label {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.payment-label span {
+  margin-left: 10px;
+}
+
+.payment-btn {
+  display: block;
+  width: 100%;
+  background-color: #0056b3;
   color: #fff;
-  margin-bottom: 1.2rem;
-}
-
-/* Left Side Of Container */
-.left-side {
-  /* background: url("../images/food2.jpg"); */
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.text-box {
-  background: rgba(95, 121, 134, 0.8);
-  width: 100%;
-  padding: 1rem 2rem;
-  position: absolute;
-  bottom: 0;
-}
-
-.home-heading {
-  color: #e8e8e1;
-  font-size: 3.6rem;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-.home-price {
-  color: #aeae97;
-  font-size: 2.4rem;
-  margin-bottom: 1.2rem;
-}
-
-.home-desc {
-  color: #e8e8e1;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-}
-
-/* Right Side of container */
-.right-side {
-  background-color: #ffffff;
-  padding: 2rem 3.6rem; /* Increased padding */
-  border-radius: 15px;
-}
-
-.receipt {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  border-bottom: solid 1px;
-  margin-bottom: 1.5rem;
-}
-
-.receipt-heading {
-  font-size: 1.8rem;
-  text-align: left;
-}
-
-.table {
-  border-collapse: separate;
-  border-spacing: 0 1.8rem;
-  color: #64645f;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.total td {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.price {
-  text-align: end;
-}
-
-/* Payment Section */
-.payment-heading {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-}
-
-.form-box {
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 2rem;
-}
-
-.card-logo {
-  font-size: 2.4rem;
-}
-
-.expires,
-.form-box label {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.form-box input {
-  font-family: inherit;
-  font-size: 1.4rem;
-  padding: 0.8rem;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.form-box select {
-  padding: 0.8rem;
-}
-
-.form-box #cvv {
-  width: 100%;
-}
-
-.cvv-info:link,
-.cvv-info:visited {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.cvv-info:hover,
-.cvv-info:active {
-  color: #5f7986;
-  text-decoration: none;
-}
-
-.btn {
-  background-color: #4c616b;
+  padding: 15px;
   border: none;
-  border-radius: 12px;
-  color: #eff2f3;
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
-  padding: 1.8rem;
+  border-radius: 8px;
+  font-size: 1.2em;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #5f7986;
-  transition: ease-out 0.1s;
+.payment-btn:hover {
+  background-color: #004494;
 }
 
-.footer-text {
-  font-size: 1.2rem;
-  text-align: center;
-}
-.footer-h2 {
-  margin: 30px;
-  text-align: center;
-  justify-items: center;
-}
-.form-box *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.8rem rgba(139, 139, 107, 0.5);
-  border-radius: 8px;
-}
-
-.meal-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-top: 1rem;
-  border-radius: 8px;
-}
-
-.mastercard-colored {
-  color: #eb001b;
-  background-color: #f79e1b;
-  border-radius: 5px;
-}
-
-.payment-method-select {
-  width: 100%;
-  padding: 0.8rem; /* Increased padding */
-  margin-bottom: 1.5rem;
-}
-
-.payment-buttons {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.mpesa {
-  height: 2.4rem; /* Increased size */
+.payment-btn:active {
+  background-color: #003377;
 }

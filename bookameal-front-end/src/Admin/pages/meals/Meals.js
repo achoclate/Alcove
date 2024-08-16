@@ -12,7 +12,7 @@ import {
     DialogContent,
     DialogTitle,
     TextField
-} from '@material-ui/core'
+} from '@material-ui/core';
 
 const Meals = () => {
     const [meals, setMeals] = useState([]);
@@ -23,7 +23,7 @@ const Meals = () => {
         // Fetch meal categories from TheMealDB API
         axios.get('https://www.themealdb.com/api/json/v1/1/categories.php')
             .then(response => {
-                setMeals(response.data.categories);
+                setMeals(response.data.categories);  // Load categories only
             })
             .catch(error => {
                 console.error('Error fetching meal data:', error);
@@ -60,16 +60,13 @@ const Meals = () => {
                         <Card>
                             <CardMedia
                                 component="img"
-                                height="140"
-                                image={meal.strCategoryThumb}
+                                style={{ height: '180px', width: '80%', objectFit: 'cover' }} // Consistent image sizing
+                                image={meal.strCategoryThumb} // Category image
                                 alt={meal.strCategory}
                             />
                             <CardContent>
                                 <Typography variant="h5" component="div">
-                                    {meal.strCategory}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {meal.strCategoryDescription}
+                                    {meal.strCategory}  // Category name
                                 </Typography>
                                 <Button
                                     variant="contained"
@@ -110,7 +107,6 @@ const Meals = () => {
                                 variant="standard"
                                 defaultValue={selectedMeal.strCategoryDescription}
                             />
-                            {/* Add fields for price, ingredients, and image URL if needed */}
                         </div>
                     )}
                 </DialogContent>

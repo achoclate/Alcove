@@ -81,5 +81,6 @@
 }
 
 .MuiDataGrid-columnSeparator {
-  display: none; /* Hide column separators */
+  display: block; /* Hide column separators */
+  background-color: #3bb077;
 }

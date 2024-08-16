@@ -1,6 +1,7 @@
 .user {
   flex: 4;
   padding: 20px;
+  margin-top: 14rem;
 }
 
 .userTitleContainer {
@@ -126,7 +127,7 @@
 
 .userUpdateInput {
   border: none;
-  width: 250px;
+  width: 100px;
   height: 30px;
   border-bottom: 1px solid gray;
 }

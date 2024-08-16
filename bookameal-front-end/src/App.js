@@ -15,16 +15,17 @@ import Footer from './components/Footer/Footer';
 import UserProfile from './Pages/UserProfile/UserProfile';
 import Orders from './components/Orders/Orders';
 import MealOfTheDay from './Pages/MealOfTheDay/MealOfTheDay';
-import AdminRoutes from './Admin/AdminRoutes'; // Ensure AdminRoutes is properly implemented
+import Payment from './Payments/Payment';
+import AdminRoutes from './Admin/AdminRoutes';
 import BrunchRoutes from "./components/Brunch/BrunchRoutes";
-// import Notifications from "./components/Notifications/Notifications";
+import { OrderProvider } from './OrderContext';
 import './App.css';
 
 const App = () => {
   const [user, setUser] = useState(null);
 
   const handleLogin = (userData) => {
-    setUser(userData); // userData should include user details
+    setUser(userData);
   };
 
   const handleLogout = () => {
@@ -33,44 +34,44 @@ const App = () => {
 
   return (
     <Router>
-      <Routes>
-        {/* Public Routes */}
-        <Route
-          path="/*"
-          element={
-            <>
-              <Navigationbar user={user} onLogout={handleLogout} />
-              <main>
-                <Routes>
-                  <Route path="/" element={<><Hero /><Chef /></>} />
-                  <Route path="/about" element={<AboutUs />} />
-                  <Route path="/reservation" element={<Reservation />} />
-                  <Route path="/login" element={<Login onLogin={handleLogin} />} />
-                  <Route path="/signup" element={<SignUp />} />
-                  <Route path="/contact" element={<ContactUs />} />
-                  <Route path="/menu" element={<MenuList />} />
-                  <Route path="/orders" element={<Orders />} />
-                  <Route path="/smoke/*" element={<SmokeApp />} />
-                  <Route path="/" element={<Hero />} />
-                  <Route path="/brunch" element={<BrunchRoutes />} />{" "}
-                  {/* <Route path="/notifications" element={<Notifications />} /> */}
-                  <Route path="/meal-of-the-day" element={<MealOfTheDay />} />
+      <OrderProvider>
+        <Routes>
+          {/* Public Routes */}
+          <Route
+            path="/*"
+            element={
+              <>
+                <Navigationbar user={user} onLogout={handleLogout} />
+                <main>
+                  <Routes>
+                    <Route path="/" element={<><Hero /><Chef /></>} />
+                    <Route path="/about" element={<AboutUs />} />
+                    <Route path="/reservation" element={<Reservation />} />
+                    <Route path="/login" element={<Login onLogin={handleLogin} />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/contact" element={<ContactUs />} />
+                    <Route path="/menu" element={<MenuList />} />
+                    <Route path="/payment" element={<Payment />} />
+                    <Route path="/orders" element={<Orders />} />
+                    <Route path="/smoke/*" element={<SmokeApp />} />
+                    <Route path="/meal-of-the-day" element={<MealOfTheDay />} />
+                    <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} />
+                    <Route path="/brunch" element={<BrunchRoutes />} />
+                    <Route path="*" element={<div>404 Not Found</div>} />
+                  </Routes>
+                </main>
+                <Footer />
+              </>
+            }
+          />
 
-                  <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} />
-                  <Route path="*" element={<div>404 Not Found</div>} />
-                </Routes>
-              </main>
-              <Footer />
-            </>
-          }
-        />
-
-        {/* Admin Routes */}
-        <Route
-          path="/admin/*"
-          element={<AdminRoutes />} // AdminRoutes should handle admin-specific layout and routing
-        />
-      </Routes>
+          {/* Admin Routes */}
+          <Route
+            path="/admin/*"
+            element={<AdminRoutes />} 
+          />
+        </Routes>
+      </OrderProvider>
     </Router>
   );
 };

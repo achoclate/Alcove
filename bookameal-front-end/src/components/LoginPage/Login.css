@@ -8,14 +8,15 @@ body, html {
 
 .wrapper {
   position: relative;
-  margin-top: 20rem;
+  margin-top: 22rem;
+  margin-bottom: 0;
   left: 50%; 
   top: 50%;
   transform: translate(-50%, -50%); 
   display: flex;
   justify-content: center;    
   align-items: center;
-  height: 100vh; /* Full height of the viewport */
+  height: 100vh-60px-40px; /* Full height of the viewport */
   background-image: url('../../assets/login.jpeg'); /* Background image */
   background-size: cover;
   background-position: center;

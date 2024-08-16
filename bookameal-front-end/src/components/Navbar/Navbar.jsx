@@ -23,11 +23,11 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/menu">
               Menu
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-              Contact
-            </Nav.Link>
             <Nav.Link as={Link} to="/orders">
               Orders
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact">
+              Contact
             </Nav.Link>
             <Nav.Link as={Link} to="/notifications">
               Notifications

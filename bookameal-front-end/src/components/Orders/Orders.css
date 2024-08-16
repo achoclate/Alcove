@@ -7,6 +7,7 @@ html {
 
 /* General Styles */
 body {
+  background: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,12 +16,11 @@ body {
   font-weight: bold;
   margin: 0;
   overflow-y: auto;
-  background-color: black; /* Set background color to black */
-  color: white; /* Set text color to white */
 }
 
 /* Content Container */
-.content {
+.order-card {
+  scroll-behavior: smooth;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -29,31 +29,29 @@ body {
   flex-direction: row;
   overflow-y: auto;
   box-sizing: border-box;
+  /* background-image: url("../assets/heroImage.jpeg"); */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 /* Cart Section Styles */
 .order-cart {
-  background-color: black; /* Ensure background is black */
+  background-color: #6b6b6bf6;
   padding: 7vh;
   margin: 0;
   width: 50%;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 /* Summary Section Styles */
 .order-summary {
-  background-color: white; /* Set background to white */
+  background-color: #ddd;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 4vh;
   width: 50%;
-  color: black; /* Ensure text is black for readability */
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+  color: rgb(65, 65, 65);
 }
 
 /* Main Row Styles */
@@ -61,7 +59,6 @@ body {
   margin: 0;
   padding: 2vh 0;
   width: 100%;
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 .order-row {
@@ -75,14 +72,13 @@ body {
 
 .order-title b {
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 .order-close {
   margin-left: auto;
   font-size: 0.7rem;
   cursor: pointer;
-  color: white; /* Ensure text is white */
+  color: black;
 }
 
 .order-back-to-shop {
@@ -91,70 +87,63 @@ body {
 
 .order-back-to-shop a {
   padding: 0 1vh;
-  color: white; /* Ensure link color is white */
 }
 
 h5 {
   margin-top: 4vh;
   font-size: large;
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 hr {
   margin-top: 1.25rem;
-  border-color: white; /* Ensure hr color is white */
 }
 
 form {
   padding: 2vh 0;
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 select,
 input {
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Use white border */
+  border: 1px solid rgba(0, 0, 0, 0.137);
   padding: 1.5vh 1vh;
   margin-bottom: 4vh;
   outline: none;
   width: 100%;
-  background-color: black; /* Set background to black */
-  color: white; /* Set text color to white */
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
+  background-color: rgb(247, 247, 247);
 }
 
-input::placeholder {
-  color: rgba(255, 255, 255, 0.6); /* Set placeholder color to light white */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 .order-btn {
-  background-color: black; /* Set background to black */
-  border-color: black; /* Border color to black */
-  color: white; /* Set text color to white */
+  background-color: #000;
+  border-color: #000;
+  color: white;
   width: 100%;
   font-size: 0.7rem;
   margin-top: 4vh;
   padding: 1vh;
   cursor: pointer;
   border-radius: 50px;
-  font-family: "Montserrat", sans-serif; /* Ensure Montserrat font is applied */
 }
 
 .order-btn:focus {
   box-shadow: none;
   outline: none;
-  color: white; /* Ensure color stays white */
+  color: white;
 }
 
 .order-btn:hover {
-  color: white; /* Ensure color stays white */
+  color: white;
 }
 
 a {
-  color: white; /* Ensure links are white */
+  color: black;
 }
 
 a:hover {
-  color: white; /* Ensure hover color is white */
+  color: black;
   text-decoration: none;
 }
 
@@ -170,8 +159,21 @@ a:hover {
   background-position-y: center;
 }
 
+/* Separate Image Styles */
+.order-image {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.order-image img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 767px) {
-  .content {
+  .order-card {
     flex-direction: column;
     padding: 20px;
   }

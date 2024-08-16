@@ -2,25 +2,27 @@
 body {
     padding-top: 60px; /* Adjust based on your Navbar height */
     margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Set a default font */
+    font-family: "Montserrat", sans-serif; /* Set a default font */
+   
   }
   
   .meal-of-the-day {
     text-align: center;
     padding: 40px; /* Increased padding for spaciousness */
-    background-color: #f8f9fa;
+    background-color: black;
     min-height: 80vh; /* Ensure the page takes up at least 80% of the viewport height */
   }
   
   .meal-of-the-day h1 {
+    margin-top: 1.25rem;
     margin-bottom: 20px;
     font-size: 2.5rem; /* Larger font size for heading */
-    color: #333;
+    color: white;
   }
   
   .meal-of-the-day p {
     font-size: 1.2rem; /* Slightly larger font size for better readability */
-    color: #666;
+    color: white;
     margin-bottom: 30px; /* More space below the paragraph */
   }
   
@@ -38,14 +40,14 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: 000;
     width: 300px; /* Increased width for larger card size */
     text-align: center;
   }
   
   .meal-button {
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(246, 242, 242);
+    color: fff;
     border: none;
     padding: 12px 20px;
     font-size: 18px; /* Larger font size for the button */
@@ -56,7 +58,7 @@ body {
   }
   
   .meal-button:hover {
-    background-color: #0056b3;
+    background-color: grey;
   }
   
   .meal-details {

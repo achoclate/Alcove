@@ -1,8 +1,8 @@
 /* Sidebar Styling */
 .sidebar {
   height: calc(100vh - 60px); /* Adjust for top bar height (60px) */
-  width: 250px;
-  background-color: #ffffff; /* White background for the sidebar */
+  width: 190px;
+  background-color: grey; /* White background for the sidebar */
   color: #000000; /* Black text for better contrast */
   display: flex;
   flex-direction: column;
