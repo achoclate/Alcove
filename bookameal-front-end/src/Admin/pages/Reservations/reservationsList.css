@@ -1,0 +1,73 @@
+/* Container for the entire reservations list */
+.reservationsListContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12rem;
+  margin-top: 5rem;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: gray; /* Clean white background for a premium look */
+  border-radius: 8px; /* Rounded corners for a modern feel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 100%; /* Ensure the container doesn't overflow */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+/* Style for the DataGrid component */
+.reservationsList {
+  height: 600px; /* Adjust height to ensure all content fits well */
+  width: 60vw;
+  background-color: #ffffff; /* White background for the table */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow with container */
+  border: 1px solid #e0e0e0; /* Light gray border for separation */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Header styles for DataGrid */
+.MuiDataGrid-columnHeader {
+  background-color: black; /* Premium blue background */
+  color: #ffffff; /* White text color for contrast */
+  font-weight: 600; /* Semi-bold text for emphasis */
+  border-bottom: 2px solid #0056b3; /* Darker blue border for clarity */
+}
+
+/* Styling for the rows */
+.MuiDataGrid-row {
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.MuiDataGrid-row:hover {
+  background-color: #f8f9fa; /* Subtle light gray background on hover */
+}
+
+/* Styling for cells */
+.MuiDataGrid-cell {
+  border-bottom: 1px solid #f1f1f1; /* Light border for cells */
+  padding: 8px; /* Adequate padding for readability */
+}
+
+/* Style for pagination toolbar */
+.MuiTablePagination-root {
+  border-top: 1px solid #e0e0e0; /* Light border on top for separation */
+}
+
+.MuiTablePagination-select {
+  background-color: #f9f9f9; /* Very light gray background for select */
+  border-radius: 4px; /* Rounded corners for select */
+}
+
+.MuiTablePagination-selectIcon {
+  color: #007bff; /* Blue color for the dropdown icon */
+}
+
+.MuiTablePagination-caption {
+  color: #333333; /* Dark gray text color for caption */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .reservationsList {
+    height: auto; /* Allow height to adjust based on content on smaller screens */
+  }
+}

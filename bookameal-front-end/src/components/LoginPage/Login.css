@@ -1,0 +1,161 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 22rem;
+  margin-bottom: 0;
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+  height: 100vh-60px-40px; /* Full height of the viewport */
+  background-image: url('../../assets/login.jpeg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-right: 50rem;
+  
+}
+
+/* Form styling */
+form {
+  background: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  color: #fff; /* Ensure text is visible */
+}
+
+/* Header style */
+form h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Input box styling */
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 15px 45px 15px 20px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Remember me and forgot password section */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: -10px 0 20px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 4px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Login button */
+button {
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Register link */
+.register-link {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.register-link p {
+  margin: 0;
+}
+
+.register-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  form h1 {
+    font-size: 28px;
+  }
+
+  .input-box {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 15px;
+  }
+
+  form h1 {
+    font-size: 24px;
+  }
+
+  .input-box {
+    margin: 10px 0;
+  }
+}

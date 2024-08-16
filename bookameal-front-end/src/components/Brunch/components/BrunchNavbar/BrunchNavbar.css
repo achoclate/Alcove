@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar.dark {
+  background-color: #1e1e1e;
+}
+
+.custom-navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.custom-navbar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.custom-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: inherit;
+}
+
+.custom-logo-img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.custom-navbar-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-menu-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-menu-link:hover,
+.custom-menu-link.active {
+  color: #f7d306;
+}
+
+.custom-navbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.custom-search-container {
+  position: relative;
+}
+
+.custom-search-input {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+.custom-search-container:hover .custom-search-input,
+.custom-search-input:focus {
+  width: 200px;
+}
+
+.custom-search-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.custom-theme-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.custom-order-button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #1e1f46, #f7d306);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-order-button:hover {
+  transform: scale(1.05);
+}
+
+.custom-mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-mobile-menu {
+  display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .custom-menu {
+    display: none;
+  }
+
+  .custom-mobile-menu-toggle {
+    display: block;
+  }
+
+  .custom-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .custom-mobile-menu .custom-menu-link {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .custom-navbar.dark .custom-mobile-menu {
+    background-color: #1e1e1e;
+  }
+
+  .custom-search-input {
+    width: 200px;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .custom-navbar {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .custom-search-input {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #555;
+}
+
+body.dark-mode .custom-search-button {
+  color: #fff;
+}
+
+body.dark-mode .custom-menu-link.active,
+body.dark-mode .custom-menu-link:hover {
+  color: #f7d306;
+}
+
+body.dark-mode .custom-order-button {
+  background: linear-gradient(to right, #1e1f46, #f7d306);
+}
+
+body.dark-mode .custom-mobile-menu {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .custom-mobile-menu .custom-menu-link {
+  color: #ffffff;
+}
+
+body.dark-mode .custom-mobile-menu .custom-menu-link:hover {
+  color: #f7d306;
+}

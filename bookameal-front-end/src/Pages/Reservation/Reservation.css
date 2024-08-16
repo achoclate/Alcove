@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.reservation-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.dress-code-section, .reservation-form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; /* Increased padding for a more spacious look */
+  color: white;
+}
+
+.dress-code-section {
+  background-color: #B22222; /* Slightly darker red for a more elegant feel */
+  text-align: center;
+}
+
+.reservation-form-section {
+  background-color: #1a1a1a; /* Darker background for a sleek, modern look */
+}
+
+.reservation-form-section h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.reservation-form-section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Limit form width for better readability */
+  align-items: flex-start;
+  background-color: #2c2c2c;
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners for a modern touch */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.reservation-form-section label {
+  margin-bottom: 5px;
+  color: #bbbbbb;
+  font-size: 14px;
+  font-weight: bold; /* Emphasize labels */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.reservation-form-section input {
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #555; /* Subtle border for better contrast */
+  background-color: #333;
+  color: #eeeeee; /* Slightly brighter text for better legibility */
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.reservation-form-section input:focus {
+  border-color: red; /* Highlight input on focus */
+  outline: none;
+  background-color: #444;
+}
+
+.reservation-form-section button {
+  padding: 12px 25px;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.reservation-form-section button:hover {
+  background-color: red;
+  transform: translateY(-2px); /* Slight lift on hover for interactivity */
+}
+
+.reservation-form-section button:active {
+  background-color: red;
+  transform: translateY(0); /* Return to normal position on click */
+}
