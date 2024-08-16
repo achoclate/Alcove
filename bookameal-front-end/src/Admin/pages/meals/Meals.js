@@ -50,7 +50,7 @@ const Meals = () => {
     };
 
     return (
-        <div style={{ padding: '20px' }}>
+        <div style={{ padding: '20px', marginLeft: '12rem' }}>
             <Button variant="contained" color="primary" onClick={handleAddMeal}>
                 Add New Meal
             </Button>
@@ -70,7 +70,7 @@ const Meals = () => {
                                 </Typography>
                                 <Button
                                     variant="contained"
-                                    color="primary"
+                                    color="black"
                                     onClick={() => handleEditClick(meal)}
                                     style={{ marginTop: '10px' }}
                                 >

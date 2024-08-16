@@ -18,8 +18,16 @@ const About = () => {
                     Steak&Smokehouse offers a friendly and warm atmosphere, with heavy emphasis on French and Afro-Asian dishes made by our cordon bleu chef. This unique blend allows one to experience a whole new genre of cuisines all at once.
                 </p>
                 <div className="about-buttons">
-                    <a href="#awards" className="about-button">→ OUR AWARDS</a>
-                    <a href="#menu" className="about-button">→ VIEW MENU</a>
+                <a href="#menu" className="about-button">→ VIEW MENU</a>
+                <a
+  href={`https://api.whatsapp.com/send?phone=254796963327&text=Home%20of%20culinary%20excellence%21
+)}`}
+  className="about-button"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  → ORDER NOW
+</a>
                 </div>
             </div>
         </div>

@@ -5,9 +5,10 @@
 }
 
 .foodOrdersTitle {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-left: 29rem;
 }
 
 .foodOrdersTableContainer {
@@ -16,8 +17,9 @@
 }
 
 .foodOrdersTable {
-  width: 100%;
+  width: 60vw;
   border-collapse: collapse;
+  margin-left: 12rem;
 }
 
 .foodOrdersTable th,

@@ -23,7 +23,6 @@ export default function UserList() {
 
   const handleDelete = async (id) => {
     try {
-      // Implement the delete functionality by sending a delete request to the backend
       await axios.delete(`http://localhost:5000/users/${id}`);
       setData(data.filter((item) => item.id !== id));
     } catch (error) {
@@ -32,14 +31,14 @@ export default function UserList() {
   };
 
   const columns = [
-    { field: "id", headerName: "ID", width: 120 },
+    { field: "id", headerName: "ID", width: 100 },
     {
       field: "username",
       headerName: "User",
       width: 250,
       renderCell: (params) => (
         <div className="userListUser">
-          <img className="userListImg" src="" alt="" />
+          <img className="userListImg" src={params.row.avatar} alt="" />
           {params.row.username}
         </div>
       ),
@@ -48,10 +47,10 @@ export default function UserList() {
     {
       field: "action",
       headerName: "Action",
-      width: 100, // Minimized width for the action column
+      width: 150,
       renderCell: (params) => (
         <>
-          <Link to={"/user/" + params.row.id}>
+          <Link to={`/user/${params.row.id}`}>
             <button className="userListEdit">Edit</button>
           </Link>
           <DeleteOutline

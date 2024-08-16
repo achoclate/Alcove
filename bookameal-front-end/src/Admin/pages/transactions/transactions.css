@@ -5,9 +5,10 @@
 }
 
 .transactionsTitle {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-left: 28rem;
 }
 
 .transactionsTableContainer {
@@ -16,8 +17,9 @@
 }
 
 .transactionsTable {
-  width: 100%;
+  width: 60vw;
   border-collapse: collapse;
+  margin-left: 12rem;
 }
 
 .transactionsTable th,

@@ -53,7 +53,7 @@ const App = () => {
                     <Route path="/menu" element={<MenuList />} />
                     <Route path="/payment" element={<Payment />} />
                     <Route path="/orders" element={<Orders />} />
-                    <Route path="/smoke/*" element={<SmokeApp />} />
+                    {/* <Route path="/smoke/*" element={<SmokeApp />} /> */}
                     <Route path="/meal-of-the-day" element={<MealOfTheDay />} />
                     <Route path="/profile" element={<UserProfile user={user} onLogout={handleLogout} />} />
                     <Route path="/brunch" element={<BrunchRoutes />} />
@@ -63,13 +63,16 @@ const App = () => {
                 <Footer />
               </>
             }
+            
           />
+          <Route path="/smoke/*" element={<SmokeApp />} />
 
           {/* Admin Routes */}
           <Route
             path="/admin/*"
             element={<AdminRoutes />} 
           />
+          
         </Routes>
       </OrderProvider>
     </Router>

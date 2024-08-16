@@ -2,10 +2,11 @@
 .reservationsListContainer {
   display: flex;
   flex-direction: column;
+  margin-left: 12rem;
   margin-top: 5rem;
   margin-bottom: 50px;
   padding: 20px;
-  background-color: #ffffff; /* Clean white background for a premium look */
+  background-color: gray; /* Clean white background for a premium look */
   border-radius: 8px; /* Rounded corners for a modern feel */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   max-width: 100%; /* Ensure the container doesn't overflow */
@@ -15,7 +16,7 @@
 /* Style for the DataGrid component */
 .reservationsList {
   height: 600px; /* Adjust height to ensure all content fits well */
-  width: 100%;
+  width: 60vw;
   background-color: #ffffff; /* White background for the table */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow with container */
@@ -25,7 +26,7 @@
 
 /* Header styles for DataGrid */
 .MuiDataGrid-columnHeader {
-  background-color: rgb(151, 147, 147); /* Premium blue background */
+  background-color: black; /* Premium blue background */
   color: #ffffff; /* White text color for contrast */
   font-weight: 600; /* Semi-bold text for emphasis */
   border-bottom: 2px solid #0056b3; /* Darker blue border for clarity */

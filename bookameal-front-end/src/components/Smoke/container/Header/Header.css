@@ -1,5 +1,6 @@
 .app__header {
     background-color: var(--color-black);
+    margin-top: 4rem;
 }
 
 .app__header-h1 {
@@ -10,6 +11,7 @@
     text-transform: capitalize;
     line-height: 117px;
     font-size: 90px;
+    
 }
 
 .app__header-img img {

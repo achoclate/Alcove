@@ -13,6 +13,7 @@ const Header = () => (
         Exploring the realm of fine dining unveils a symphony of flavors, a meticulous presentation, and an ambiance that elevates the entire experience. The essence of fine dining is not just in the food but in the artistry and attention to detail that transform a meal into a memorable event.
       </p>
       <img src={menuqr} alt="menu QR code" className="menuqr__image" /> {/* Replace the button with the image */}
+      <a href="#awards" className="about-button">→ OUR AWARDS</a>
     </div>
 
     <div className="app__wrapper_img">

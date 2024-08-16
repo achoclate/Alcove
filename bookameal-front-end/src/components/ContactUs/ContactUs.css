@@ -9,7 +9,7 @@
     background-size: cover;
     background-position: center;
     padding: 2rem;
-    margin-top: 20px; /* Adjust based on the height of your navbar */
+    margin-top: 2rem; /* Adjust based on the height of your navbar */
     font-family: 'Montserrat', sans-serif;
     color: white; /* Set text color to white for better visibility */
 }

@@ -12,10 +12,11 @@
 .mealsTableContainer {
   margin-top: 20px;
   overflow-x: auto;
+  
 }
 
 .mealsTable {
-  width: 100%;
+  width: 70vw;
   border-collapse: collapse;
 }
 
@@ -49,7 +50,7 @@
 
 .editMealForm button {
   padding: 10px;
-  background-color: #4caf50;
+  background-color:grey;
   color: #fff;
   border: none;
   border-radius: 4px;
