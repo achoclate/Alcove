@@ -1,0 +1,34 @@
+.transactions {
+  flex: 4;
+  padding: 20px;
+  margin-top: 5rem;
+}
+
+.transactionsTitle {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-left: 28rem;
+}
+
+.transactionsTableContainer {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.transactionsTable {
+  width: 60vw;
+  border-collapse: collapse;
+  margin-left: 12rem;
+}
+
+.transactionsTable th,
+.transactionsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.transactionsTable th {
+  background-color: black;
+}

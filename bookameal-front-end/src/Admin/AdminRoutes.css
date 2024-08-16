@@ -1,0 +1,157 @@
+General Styling for Admin Panel
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5; /* Light gray background for the whole page */
+}
+
+/* Container for Sidebar and Content */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: calc(100vh - 60px); /* Adjust height based on top bar */
+    width: 250px;
+    background-color: #ffffff; /* White background for the sidebar */
+    color: #000000; /* Black text for better contrast */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px; /* Adjust based on top bar height */
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow-y: auto; /* Allow scrolling if needed */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Sidebar Styling for Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #000000; /* Black text for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ff5722; /* Accent color on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+.sidebar ul li a.active {
+    background-color: #ff5722; /* Highlight active link */
+    color: #ffffff; /* White text for active link */
+}
+
+.sidebar ul li a .icon {
+    margin-right: 10px;
+}
+
+.sidebar ul li a .text {
+    font-size: 0.9em;
+}
+
+/* Content Area Styling */
+.content {
+    margin-left: 250px; /* Space for sidebar */
+    padding: 20px;
+    flex: 1;
+    background-color: #ffffff; /* White background for content area */
+    overflow-y: auto; /* Allow scrolling for content overflow */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* White background for tables */
+    color: #333333; /* Dark text for readability */
+    margin: 20px 0; /* Space above and below the table */
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd; /* Light border for table rows */
+}
+
+.table th {
+    background-color: #f4f4f4; /* Light background for header cells */
+    color: #333333;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for table rows */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Optional: Additional Premium Touches */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.card-body {
+    font-size: 0.9em;
+    color: #666666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 200px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}
+
+/* Ensure the body or main container has no padding/margin that affects positioning */
+body, html {
+    margin: 0;
+    padding: 0;
+}
