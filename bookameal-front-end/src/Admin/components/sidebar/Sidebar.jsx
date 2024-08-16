@@ -8,7 +8,7 @@ import {
   MenuBook,
   Fastfood,
   Event,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 
 export default function Sidebar() {
   return (

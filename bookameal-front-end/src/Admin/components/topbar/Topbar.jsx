@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./topbar.css";
-import { NotificationsNone, Settings, AccountCircle } from "@material-ui/icons";
+import { NotificationsNone, Settings, AccountCircle } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Topbar({ setAuthenticated }) {

@@ -12,7 +12,7 @@ import {
     DialogContent,
     DialogTitle,
     TextField
-} from '@material-ui/core';
+} from '@mui/material';
 
 const Meals = () => {
     const [meals, setMeals] = useState([]);
