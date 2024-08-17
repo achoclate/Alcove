@@ -8,7 +8,7 @@ const MealOfTheDay = () => {
   useEffect(() => {
     const fetchMenuOptions = async () => {
       try {
-        const response = await fetch('http://localhost:5000/foods'); // Adjust URL if needed
+        const response = await fetch('https://alcove.onrender.com/foods'); // Adjust URL if needed
         if (response.ok) {
           const data = await response.json();
           setMenuOptions(data);
@@ -41,7 +41,7 @@ const MealOfTheDay = () => {
             <div className="meal-details">
               {meal.image_url && (
                 <img
-                  src={`http://localhost:5000${meal.image_url}`} // Ensure this matches your Flask server setup
+                  src={`https://alcove.onrender.com${meal.image_url}`} // Ensure this matches your Flask server setup
                   alt={meal.name}
                   className="meal-image"
                 />
@@ -58,7 +58,7 @@ const MealOfTheDay = () => {
           <h3>You have selected: {selectedMeal.name}</h3>
           {selectedMeal.image_url && (
             <img
-              src={`http://localhost:5000${selectedMeal.image_url}`} // Ensure this matches your Flask server setup
+              src={`https://alcove.onrender.com${selectedMeal.image_url}`} // Ensure this matches your Flask server setup
               alt={selectedMeal.name}
               className="selected-meal-image"
             />

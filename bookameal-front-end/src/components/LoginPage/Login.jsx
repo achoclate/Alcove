@@ -16,7 +16,7 @@ const LoginPage = ({ onLogin }) => {
     setErrorMessage(""); // Clear any previous error messages
 
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch("https://alcove.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

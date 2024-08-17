@@ -17,7 +17,7 @@ export default function Topbar({ setAuthenticated }) {
 
   const fetchMessages = async () => {
     try {
-      const response = await fetch("http://localhost:5000/contact_messages");
+      const response = await fetch("https://alcove.onrender.com/contact_messages");
       const data = await response.json();
       setMessages(data);
       setMessageCount(data.length);
@@ -42,7 +42,7 @@ export default function Topbar({ setAuthenticated }) {
   };
 
   const handleLogout = () => {
-    fetch("http://localhost:5000/logout", {
+    fetch("https://alcove.onrender.com/logout", {
       method: "POST",
     })
       .then((response) => response.json())

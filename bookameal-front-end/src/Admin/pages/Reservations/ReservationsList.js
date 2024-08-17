@@ -9,7 +9,7 @@ export default function ReservationsList() {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/reservations");
+        const response = await axios.get("https://alcove.onrender.com/reservations");
         console.log(response.data); // Debugging line
         setData(response.data);
       } catch (error) {

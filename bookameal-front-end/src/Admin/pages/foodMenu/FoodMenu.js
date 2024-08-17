@@ -7,7 +7,7 @@ export default function FoodMenu() {
 
   // Fetch food list from the backend on component mount
   useEffect(() => {
-    fetch('http://localhost:5000/foods') // Ensure this URL matches your Flask server
+    fetch('https://alcove.onrender.com/foods') // Ensure this URL matches your Flask server
       .then(response => response.json())
       .then(data => setFoodList(data))
       .catch(error => console.error('Error fetching food data:', error));
@@ -35,12 +35,12 @@ export default function FoodMenu() {
     }
 
     try {
-      await fetch('http://localhost:5000/foods', { // Ensure this URL matches your Flask server
+      await fetch('https://alcove.onrender.com/foods', { // Ensure this URL matches your Flask server
         method: 'POST',
         body: formData,
       });
       // Refresh the food list after adding new food
-      const response = await fetch('http://localhost:5000/foods');
+      const response = await fetch('https://alcove.onrender.com/foods');
       const data = await response.json();
       setFoodList(data);
       setNewFood({ name: "", category: "", price: "", image: null });
@@ -102,7 +102,7 @@ export default function FoodMenu() {
                 <td>${food.price.toFixed(2)}</td>
                 <td>
                   <img
-                    src={`http://localhost:5000${food.image_url}`}
+                    src={`https://alcove.onrender.com${food.image_url}`}
                     alt={food.name}
                     className="foodImage"
                   />

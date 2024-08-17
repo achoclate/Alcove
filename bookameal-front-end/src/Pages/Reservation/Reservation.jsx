@@ -9,7 +9,7 @@ function Reservation() {
 
   useEffect(() => {
     // Fetch reservations from the backend
-    fetch('http://localhost:5000/reservations')
+    fetch('https://alcove.onrender.com/reservations')
       .then(response => response.json())
       .then(data => setReservations(data))
       .catch(error => console.error('Error fetching reservations:', error));
@@ -19,7 +19,7 @@ function Reservation() {
     e.preventDefault();
     const reservation = { guest_count: guestCount, date, time };
 
-    fetch('http://localhost:5000/reservations', {
+    fetch('https://alcove.onrender.com/reservations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
