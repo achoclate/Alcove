@@ -1,2 +1,2 @@
-node_modules/
-echo "bookameal-front-end/node_modules/.cache/" >> .gitignore
+echo "bookameal-front-end/node_modules/" >> .gitignore
+echo "*.pack" >> .gitignore
